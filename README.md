@@ -11,7 +11,7 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
  - Relocated wildlife spawns.
  - Relocated player spawns.
   <br />
-  <br />
+
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.png" width="80%">
 
 ### • Routes
