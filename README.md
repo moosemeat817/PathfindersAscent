@@ -23,6 +23,8 @@ There is no need to employ any advanced techniques or exploits (such as mountain
 Description
 
 
+<img src="https://github.com/moosemeat817/images/blob/main/AC_Overlook.jpg" width="80%">
+
 ### • Relocated Cargo Containers & Prepper Caches
 Most of the cargo containers have been relocated and will not be found out in the open.  You will need to thoroughly explore Timberwolf Mountain to find them all.  The prepper caches in all three regions have also been relocated to more elusive loactions. 
 
@@ -38,7 +40,6 @@ Each of the three regions now has one challenging player spawn point.
 ### • Other Details
 Description
 
-<img src="https://github.com/moosemeat817/images/blob/main/AC_Overlook.jpg" width="80%">
 
 
 
