@@ -15,7 +15,9 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
 <img src="https://github.com/moosemeat817/images/blob/main/BR_Overlook_Cabin.jpg" width="80%">
 
 ### • Routes
-As you move around the regions you will find that many of the routes you are accustomed to using now have impassable points for one reason or another.  There may be a rock blocking the way or an undeployed rope climb that is normally deployed that will prevent you from continuing on a particular route.  When you are traveling to the major point of interest in a region (The Summit - The Gold Mine - The Prison), you should expect the journey will be much longer and more difficult than what you are used to.  While the game envirnoment has been altered in many ways, all viable paths forward will be obvious.  In other words, you will not need to search for hidden or very narrow paths to make your way forward.  If it isn't completely obvious, then there will be subtle hints to point you in the right direction that are in keeping with what you already find in The Long Dark.
+As you move around the regions you will find that many of the routes you are accustomed to using now have impassable points for one reason or another.  There may be a rock blocking the way or an undeployed rope climb that is normally deployed that will prevent you from continuing on a particular route.  When you are traveling a primary route to the major point of interest in a region (The Summit - The Gold Mine - The Prison), you should expect the journey will be much longer and more difficult than what you are used to.  While the game envirnoment has been altered in many ways, all viable paths forward will be obvious.  In other words, you will not need to search for hidden or very narrow paths to make your way forward.  If it isn't completely obvious, then there will be subtle hints to point you in the right direction that are in keeping with what you already find in The Long Dark.
+
+Along with the clear obstacles as mentioned above, there are a variety of other changes that have been made to the environment to help create a fresh experience.  Expect the unexpected.  And while many of the changes that have been made are ment to make these regions more challenging, they are not meant to be frustratingly difficult.  On the contrary, you may find that after you get to know the alternate version of these regions that they are quite hospitable.  All of the primary routes have shortcuts built in that can either be enabled by the player (ex. rope climb deployed) or the shortcuts will open up on their own after something in particular has occurred.  So, you will have to travel these very long routes only once.  After the first time, you can make use of the shortcuts. 
  
 
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.jpg" width="80%">
@@ -39,7 +41,7 @@ Each of the three regions now has one challenging player spawn point.
 
 
 ### • Other Details
-Description
+Loot has not been altered in anyway, other than some low value items that were added to complete the mod design of the regions.
 
 
 
