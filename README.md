@@ -4,7 +4,7 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
 <img src="https://github.com/moosemeat817/images/blob/main/PathfindersAscent.jpg" width="80%">
 
  ## Features
- - Longer and more challenging routes between major points of interest.
+ - Longer and more challenging routes between the major points of interest.
  - Access to normally inaccessible areas.
  - Relocated cargo containers.
  - Relocated prepper caches.
@@ -15,7 +15,8 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
 <img src="https://github.com/moosemeat817/images/blob/main/BR_Overlook_Cabin.jpg" width="80%">
 
 ### • Routes
-There is no need to employ any advanced techniques or exploits (such as mountain goating) to traverse the more difficult routes.  You also do not need to have any other mods installed, such as the Jump mod. 
+As you move around the regions you will find that many of the routes you are accustomed to using are no longer passable for one reason or another.  There may be a rock blocking the way or an undeployed rope climb that is normally deployed that will prevent you from from continuing on a particular route.  When you are traveling to the major point of interest in these regions (The Summit - The Gold Mine - The Prison), you should expect the journey will be much longer and more difficult than what you are used to.  While the game envirnoment has been altered in many ways, all viable paths forward will be obvious.  In other words, you will not need to search for hidden or very narrow paths to make your way forward.  If it isn't obvious, then there will be subtle hints to point you in the right direction that are in keeping with what you already find in The Long Dark.  There is also no need to employ any advanced techniques or exploits (such as mountain goating) to traverse the more difficult routes. 
+ 
 
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.jpg" width="80%">
 
