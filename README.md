@@ -63,7 +63,7 @@ In particular, keep an eye out for:
 
 ---
 
-## 📦 Relocated Containers & Prepper Caches
+## 🗺️ Relocated Containers & Prepper Caches
 
 - Cargo containers have been **moved** and are **no longer out in the open**
 - You'll need to **thoroughly explore Timberwolf Mountain** to find them all
@@ -106,7 +106,7 @@ Each region has one **challenging new player spawn location**.
 
 ---
 
-## 📦 Requirements
+## 🧱 Requirements
 
 - [ModSettings](https://github.com/zeobviouslyfakeacc/ModSettings)
 - [ModData](https://github.com/zeobviouslyfakeacc/ModData)
