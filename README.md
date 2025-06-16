@@ -17,6 +17,7 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
 ### • Routes
 There is no need to employ any advanced techniques or exploits (such as mountain goating) to traverse the more difficult routes.  You also do not need to have any other mods installed, such as the Jump mod. 
 
+<img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.jpg" width="80%">
 
 ### • Inaccesible Areas
 Description
@@ -36,8 +37,6 @@ Each of the three regions now has one challenging player spawn point.
 
 ### • Other Details
 Description
-
-<img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.jpg" width="80%">
 
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Overlook.jpg" width="80%">
 
