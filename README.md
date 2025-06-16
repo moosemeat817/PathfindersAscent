@@ -1,4 +1,4 @@
-# Pathfinders Ascent
+# Pathfinder's Ascent
 An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to offer a fresh and challenging experience exploring and navigating the regions.
 
 <img src="https://github.com/moosemeat817/images/blob/main/BR_Overlook_Cabin.png" width="80%">
