@@ -60,6 +60,7 @@ In particular, keep an eye out for:
 - Best visited on a clear day for a breathtaking view
 
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Overlook.jpg" width="80%">
+
 ---
 
 ## 📦 Relocated Containers & Prepper Caches
