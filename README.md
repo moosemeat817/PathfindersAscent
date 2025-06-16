@@ -21,28 +21,28 @@ There is no need to employ any advanced techniques or exploits (such as mountain
 ### • Inaccesible Areas
 Description
 
- <br />
+
 ### • Relocated Cargo Containers & Prepper Caches
 Description
 
- <br />
+
 ### • Relocated Wildlife Spawns
 Description
 
- <br />
+
 ### • Relocated Player Spawns
 Description
 
- <br />
+
 ### • Other Details
 Description
 
 
- <br />
+
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Overlook.png" width="80%">
 
 
- <br />
+
 ## Notes
 - YOU MUST START A NEW GAME!
 - If you switch back and forth between saves that use Ruthless Heights options and saves that do not, all changes will be reverted when switching the options, with the exception that any wildlife that spawned due to the Ruthless Heights wildlife setting being enabled will still be there (but no more will spawn).
