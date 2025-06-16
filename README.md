@@ -3,17 +3,20 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
 
 <img src="https://github.com/moosemeat817/images/blob/main/BR_Overlook_Cabin.png" width="80%">
 
-## Description
-Are you an experienced TLD player that is looking for a different and challenging experience?  Can you figure out how to get to the summit of Timberwolf Mountain?  Will you survive the expedition to the gold mine in Ash Canyon?  Are you able to find a way into the prison in Blackrock?  Ruthless Heights ensures these will no longer be trivial ventures.  You may find yourself feeling like a first time player again as you navigate these regions.  A rock blocking a path here, a rope missing there, and many other small changes that make a big difference.  
-
-Along with these options, you can find a path that leads to and from the premiere overlook in Ash Canyon that is not normally accessible.  Be sure to watch your step!
-
-<img src="https://github.com/moosemeat817/images/blob/main/BR_Overlook_Cabin.png" width="80%">
-
+ ## Features
+ - Longer and more challenging routes between major points of interest.
+ - Access to normally inaccessible areas.
+ - Relocated cargo containers.
+ - Relocated prepper caches.
+ - Relocated wildlife spawns.
 
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.png" width="80%">
 
+### Details
+What does this text look like? 
 
+
+Along with these options, you can find a path that leads to and from the premiere overlook in Ash Canyon that is not normally accessible.  Be sure to watch your step!
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Overlook.png" width="80%">
 
 
