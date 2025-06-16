@@ -4,6 +4,7 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
 <img src="https://github.com/moosemeat817/images/blob/main/BR_Overlook_Cabin.png" width="80%">
 
  ## Features
+ ### Details
  - Longer and more challenging routes between major points of interest.
  - Access to normally inaccessible areas.
  - Relocated cargo containers.
