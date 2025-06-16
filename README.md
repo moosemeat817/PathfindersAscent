@@ -73,9 +73,9 @@ In particular, keep an eye out for:
 
 ## 🐺 Wildlife Spawns
 
-Wildlife behavior has been altered:
+Wildlife spawns have been moved:
 
-- Wolves, timberwolves, moose, and deer now appear in new places
+- Some of the wolves, timberwolves, moose, and deer now appear in new places
 - Some may block routes, but most are placed for **challenge and variety**
 - Once you learn their new patterns, they can be avoided like normal
 
@@ -87,7 +87,7 @@ Each region has one **challenging new player spawn location**.
 
 ---
 
-## 🎁 Other Details
+## ℹ️ Other Details
 
 - Loot has **not been changed**, except for some **minor additions** to support map design
 - You **must start a new game** to use Pathfinder’s Ascent
