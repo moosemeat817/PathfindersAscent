@@ -15,7 +15,7 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.png" width="80%">
 
 ### • Routes
-There is no need to employ any advanced techniques or exploits (such as mountain goating) to traverse the more difficult routes.  You also do not need to have any other mods installed, such as the Jump mod.<br />
+There is no need to employ any advanced techniques or exploits (such as mountain goating) to traverse the more difficult routes.  You also do not need to have any other mods installed, such as the Jump mod. <br />
 
 
 ### • Inaccesible Areas
@@ -23,11 +23,11 @@ Description
 
 
 ### • Relocated Cargo Containers & Prepper Caches
-Most of the cargo containers have been relocated and will not be found out in the open.  You will need to thoroughly explore Timberwolf Mountain to find them all.  The prepper caches in all three regions have also been relocated to more elusive loactions.<br />
+Most of the cargo containers have been relocated and will not be found out in the open.  You will need to thoroughly explore Timberwolf Mountain to find them all.  The prepper caches in all three regions have also been relocated to more elusive loactions. <br />
 
 
 ### • Relocated Wildlife Spawns
-Many of the wolf, timberwolf, moose and deer spawn points have been relocated in all three of the regions.  The wolves have not simply been placed to obstruct paths, although there are some that do that.  Similar to a normal playthrough, the wolves can be avoided once you figure out where they all are.  Most of the relocations are meant to encourage playing each of the regions differently from how you usually play them, while offering a bit more of a challenge.<br />
+Many of the wolf, timberwolf, moose and deer spawn points have been relocated in all three of the regions.  The wolves have not simply been placed to obstruct paths, although there are some that do that.  Similar to a normal playthrough, the wolves can be avoided once you figure out where they all are.  Most of the relocations are meant to encourage playing each of the regions differently from how you usually play them, while offering a bit more of a challenge. <br />
 
 
 ### • Relocated Player Spawns
