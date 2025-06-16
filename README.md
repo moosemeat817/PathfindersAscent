@@ -47,6 +47,14 @@ Description
 - If you switch back and forth between saves that use Ruthless Heights options and saves that do not, all changes will be reverted when switching the options, with the exception that any wildlife that spawned due to the Ruthless Heights wildlife setting being enabled will still be there (but no more will spawn).
 - Player spawn locations in all three regions have been changed each having a varying degree of difficulty.  (Timberwolf Mountain - Easy), (Ash Canyon - Difficult), (Blackrock - Ruthless)
 
+## Instalaation Instructions
+- Unpack PathfindersAscent.zip to your Mods folder.  The .zip contains two files that need to be in your Mods folder --> PathfindersAscent.dll AND PathfindersAscent.modcomponent
+
+## Mod Requirements
+- ModSettings (Dependency)
+- ModData (Dependency)
+- ModComponent (Dependency)
+
 ## Special Thanks
 The Long Dark Modding Server (Discord)
 
