@@ -15,13 +15,13 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
 <img src="https://github.com/moosemeat817/images/blob/main/BR_Overlook_Cabin.jpg" width="80%">
 
 ### • Routes
-As you move around the regions you will find that many of the routes you are accustomed to using now have impassable points for one reason or another.  There may be a rock blocking the way or an undeployed rope climb that is normally deployed that will prevent you from from continuing on a particular route.  When you are traveling to the major point of interest in these regions (The Summit - The Gold Mine - The Prison), you should expect the journey will be much longer and more difficult than what you are used to.  While the game envirnoment has been altered in many ways, all viable paths forward will be obvious.  In other words, you will not need to search for hidden or very narrow paths to make your way forward.  If it isn't obvious, then there will be subtle hints to point you in the right direction that are in keeping with what you already find in The Long Dark.  There is also no need to employ any advanced techniques or exploits (such as mountain goating) to traverse the more difficult routes. 
+As you move around the regions you will find that many of the routes you are accustomed to using now have impassable points for one reason or another.  There may be a rock blocking the way or an undeployed rope climb that is normally deployed that will prevent you from continuing on a particular route.  When you are traveling to the major point of interest in a region (The Summit - The Gold Mine - The Prison), you should expect the journey will be much longer and more difficult than what you are used to.  While the game envirnoment has been altered in many ways, all viable paths forward will be obvious.  In other words, you will not need to search for hidden or very narrow paths to make your way forward.  If it isn't completely obvious, then there will be subtle hints to point you in the right direction that are in keeping with what you already find in The Long Dark.
  
 
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.jpg" width="80%">
 
 ### • Inaccesible Areas
-Description
+Ash Canyon and Blackrock both have fairly substantially sized areas that were never made accesible to the players.  You can now gain access to these areas and may find they make for very comfortable places to stay.  As you are exploring Ash Canyon, be sure to take some time to find the path to the normally inaccessible scenic overlook.  You can safely make your way out to and back from the overlook point and enjoy a breathtaking view of the region.  I suggest waiting for a bright and clear day, because while there is a safe path, there are no guard rails and one wrong step could send you plummenting into The Long Dark!
 
 
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Overlook.jpg" width="80%">
