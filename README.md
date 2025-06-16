@@ -9,7 +9,7 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
  - Relocated cargo containers.
  - Relocated prepper caches.
  - Relocated wildlife spawns.
- - Relocated player spawns.
+ - Relocated player spawns.<br />
 
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.png" width="80%">
 
