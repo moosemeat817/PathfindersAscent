@@ -13,7 +13,7 @@ An alternate version of Timberwolf Mountain, Blackrock and Ash Canyon meant to o
 
 <img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.png" width="80%">
 
-### - Routes
+### •Routes
 There is no need to employ any advanced techniques or exploits (such as mountain goating) to traverse the more difficult routes.  You also do not need to have any other mods installed, such as the Jump mod.
 
 
