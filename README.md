@@ -90,7 +90,7 @@ Each region has one **challenging new player spawn location**.
 
 ## ℹ️ Other Details
 
-- You do not need to start a new game to use **Pathfinder’s Ascent**, as long as you _**have not visited any of these regions**_
+- You do not need to start a new game to use **Pathfinder’s Ascent**, as long as you _**have not visited any of these regions yet**_
 - Loot has **not been changed**, except for some minor additions to support map design
 - You can **switch the mod on or off** via Mod Settings
 - Safe to use alongside normal saves (just toggle mod off when not in use)
