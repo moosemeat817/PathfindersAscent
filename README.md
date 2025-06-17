@@ -67,6 +67,7 @@ Keep an eye out for:
 ## 🗺️ Relocated Containers & Prepper Caches
 
 - Cargo containers have been **moved** and are **no longer out in the open**
+- No help from the map
 - You'll need to **thoroughly explore Timberwolf Mountain** to find them all
 - Prepper caches in all three regions are now in **harder-to-find locations**
 
