@@ -6,7 +6,7 @@
 
 ---
 
-## 🔍 Features
+## 🏔️ Features
 
 - Longer, more challenging routes between major points of interest
 - Access to previously inaccessible areas
