@@ -14,7 +14,6 @@
 - Relocated prepper caches
 - Relocated wildlife spawn points
 - Relocated player spawn points
-- And much more!
 
 ---
 <img src="https://github.com/moosemeat817/images/blob/main/BR_Overlook_Cabin.jpg" width="80%">
