@@ -33,7 +33,7 @@ Expect longer, tougher journeys to key locations:
 - **Ash Canyon** – The Gold Mine  
 - **Blackrock** – The Prison
 
-But don’t worry—each region still has a **clear path forward**. Paths are either:
+But don’t worry, each region still has a **clear path forward**. Paths are either:
 
 - Obvious, or  
 - Marked with subtle environmental hints
