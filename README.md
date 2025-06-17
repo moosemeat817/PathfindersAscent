@@ -117,7 +117,7 @@ Each region has one **challenging new player spawn location**.
 
 ## 🙏 Special Thanks
 
-- The Long Dark Modding Server (Discord)
+- The Long Dark Modding Community (Discord)
 
 ---
 
