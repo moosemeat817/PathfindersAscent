@@ -60,7 +60,7 @@ In particular, keep an eye out for:
 - It’s safe if you're careful—no guard rails!  
 - Best visited on a clear day for a breathtaking view
 
-<img src="https://github.com/moosemeat817/images/blob/main/AC_Overlook.jpg" width="80%">
+<img src="https://github.com/moosemeat817/images/blob/main/AC_Overlook2.jpg" width="80%">
 
 ---
 
