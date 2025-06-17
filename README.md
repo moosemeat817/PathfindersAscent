@@ -78,7 +78,7 @@ Keep an eye out for:
 Wildlife spawns have been moved:
 
 - Some of the wolves, timberwolves, moose, and deer now appear in new places
-- Some may block routes, but most are placed for **challenge and variety**
+- Some may interfere with routes, but most are placed for **challenge and variety**
 - Once you learn their new patterns, they can be avoided like normal
 
 ---
