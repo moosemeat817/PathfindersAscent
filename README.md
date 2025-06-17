@@ -46,7 +46,7 @@ Once you travel these main routes, **shortcuts will become available**:
 So while the first trip may be long, repeat journeys will be quicker.
 
 ---
-<img src="https://github.com/moosemeat817/images/blob/main/AC_Foremans.jpg" width="80%">
+<img src="https://github.com/moosemeat817/images/blob/main/AC_Cabin.jpg" width="80%">
 
 ## 🏞 Inaccessible Areas
 
