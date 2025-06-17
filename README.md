@@ -54,7 +54,7 @@ Ash Canyon and Blackrock contain newly opened spaces that were previously unreac
 
 Some are scenic. Some are useful. Some are both.
 
-In particular, keep an eye out for:
+Keep an eye out for:
 
 - The **scenic overlook** in Ash Canyon  
 - It’s safe if you're careful—no guard rails!  
