@@ -1,6 +1,6 @@
 # Pathfinder's Ascent
 
-*An alternate version of Timberwolf Mountain, Blackrock, and Ash Canyon designed to offer a fresh and challenging experience for veteran explorers.*
+*An alternate version of Timberwolf Mountain, Blackrock, and Ash Canyon designed to offer a fresh and challenging experience for veteran survivors.*
 
 <img src="https://github.com/moosemeat817/images/blob/main/PathfindersAscent.jpg" width="80%">
 
