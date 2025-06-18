@@ -118,7 +118,7 @@ Each region has one **challenging new player spawn location**.
 ## 🙏 Special Thanks
 
 - The Long Dark Modding Community (Discord)
-- Like many in the community, I learned by studying the work of others. Pathfinder’s Ascent stands on the shoulders of the modders who generously shared their knowledge, tools, and creativity over the years.
+- Like many in the community, I learned by studying the work of others. Pathfinder’s Ascent stands on the shoulders of the modders who generously shared their knowledge, tools, and code over the years.
 
 
 ---
