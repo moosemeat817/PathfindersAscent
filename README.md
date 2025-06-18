@@ -123,6 +123,6 @@ Each region has one **challenging new player spawn location**.
 
 ---
 
-##
+
 If you enjoy using this mod, feel free to buy me a cup of coffee.  Thank you!
 https://ko-fi.com/moosemeat817
