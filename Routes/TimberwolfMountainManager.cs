@@ -14,26 +14,26 @@ namespace PathfindersAscent.Routes
         {
             if (string.IsNullOrEmpty(sceneName))
             {
-                MelonLogger.Warning("****************************** Scene name is null or empty");
+                //Melonlogger.Warning("****************************** Scene name is null or empty");
                 return;
             }
 
             if (sceneName == "CrashMountainRegion")
             {
-                MelonLogger.Msg("****************************** Modifying Crash Mountain (Timberwolf Mountain)");
+                //Melonlogger.Msg("****************************** Modifying Crash Mountain (Timberwolf Mountain)");
                 ModifyCrashMountain();
 
-                MelonLogger.Msg("****************************** Checking for cargo container configuration");
+                //Melonlogger.Msg("****************************** Checking for cargo container configuration");
                 CargoContainerManager.ConfigureCargoContainers(sceneName, true);
             }
             else if (sceneName == "CrashMountainRegion_SANDBOX")
             {
-                MelonLogger.Msg("****************************** Modifying Crash Mountain SANDBOX (Timberwolf Mountain)");
+                //Melonlogger.Msg("****************************** Modifying Crash Mountain SANDBOX (Timberwolf Mountain)");
                 ModifyCrashMountainSandbox();
             }
             else
             {
-                MelonLogger.Msg($"****************************** No Timberwolf Mountain route modifications for scene: {sceneName}");
+                //Melonlogger.Msg($"****************************** No Timberwolf Mountain route modifications for scene: {sceneName}");
             }
         }
 
@@ -42,21 +42,21 @@ namespace PathfindersAscent.Routes
         // ------------------------------------------------------------------------------------------------------------------
         private static void ModifyCrashMountain()
         {
-            MelonLogger.Msg("****************************** Starting Timberwolf Mountain (Crash Mountain) modifications");
+            //Melonlogger.Msg("****************************** Starting Timberwolf Mountain (Crash Mountain) modifications");
 
             // Disable climbing equipment
-            MelonLogger.Msg("****************************** Disabling climbing equipment");
+            //Melonlogger.Msg("****************************** Disabling climbing equipment");
             DisableClimbingEquipment("Art/Climbing/Climb100_chasm");
             DisableClimbingEquipment("Art/Climbing/Climb100m_mountain");
 
             // Disable specific objects by index
-            MelonLogger.Msg("****************************** Disabling specific game objects by index");
+            //Melonlogger.Msg("****************************** Disabling specific game objects by index");
             RouteUtilities.DisableChildrenByIndex("Art/GameObject", new int[] { 74, 173, 177 });
             RouteUtilities.DisableChildrenByIndex("Design/NaturalResources/Plants/lichen", new int[] { 36, 37 });
             RouteUtilities.DisableChildrenByIndex("STR_StoneCabinA_Prefab(Clone)", new int[] { 0, 12, 15 });
 
             // Disable objects
-            MelonLogger.Msg("****************************** Disabling objects");
+            //Melonlogger.Msg("****************************** Disabling objects");
             RouteUtilities.DisableGameObjects(new string[] {
                 "Art/Terrain/TreeBridge/OBJ_TreeCedarFelledC_Prefab (11)",
                 "Design/Loot/CaveCamp_hatchet/cave2",
@@ -70,7 +70,7 @@ namespace PathfindersAscent.Routes
             });
 
             // Disable optional objects that might not exist
-            MelonLogger.Msg("****************************** Disabling optional buffer memory cave objects");
+            //Melonlogger.Msg("****************************** Disabling optional buffer memory cave objects");
 
             RouteUtilities.SafeDisable("Design/BufferMemoryCaveCorpse/OBJ_ComputerLaptopB_Prefab");
             RouteUtilities.SafeDisable("Design/BufferMemoryCaveCorpse/CORPSE_Human_3");
@@ -78,14 +78,14 @@ namespace PathfindersAscent.Routes
 
 
             // Disable rock anchors and ropes
-            MelonLogger.Msg("****************************** Disabling rock anchors and ropes");
+            //Melonlogger.Msg("****************************** Disabling rock anchors and ropes");
             DisableRockAnchorsAndRopes();
 
             // Reposition all objects using unified method
-            MelonLogger.Msg("****************************** Repositioning objects");
+            //Melonlogger.Msg("****************************** Repositioning objects");
             RepositionAllObjects();
 
-            MelonLogger.Msg("****************************** Completed Timberwolf Mountain modifications");
+            //Melonlogger.Msg("****************************** Completed Timberwolf Mountain modifications");
         }
 
         // ------------------------------------------------------------------------------------------------------------------
@@ -94,7 +94,7 @@ namespace PathfindersAscent.Routes
         private static void ModifyCrashMountainSandbox()
         {
             // Reposition bunker using unified method
-            MelonLogger.Msg("****************************** Repositioning bunker");
+            //Melonlogger.Msg("****************************** Repositioning bunker");
             var bunkerData = new Dictionary<string, (Vector3 position, Vector3 rotation)>
             {
                 {
@@ -112,11 +112,11 @@ namespace PathfindersAscent.Routes
         {
             if (string.IsNullOrEmpty(basePathName))
             {
-                MelonLogger.Warning("****************************** Base path name is null or empty");
+                //Melonlogger.Warning("****************************** Base path name is null or empty");
                 return;
             }
 
-            MelonLogger.Msg($"****************************** Processing climbing equipment at path: {basePathName}");
+            //Melonlogger.Msg($"****************************** Processing climbing equipment at path: {basePathName}");
             GameObject basePath = GameObject.Find(basePathName);
             if (basePath != null)
             {
@@ -128,34 +128,34 @@ namespace PathfindersAscent.Routes
                         if (child != null)
                         {
                             child.SetActive(false);
-                            MelonLogger.Msg($"****************************** Disabled child {i} of {basePathName}");
+                            //Melonlogger.Msg($"****************************** Disabled child {i} of {basePathName}");
                         }
                         else
                         {
-                            MelonLogger.Warning($"****************************** Child {i} gameObject is null in {basePathName}");
+                            //Melonlogger.Warning($"****************************** Child {i} gameObject is null in {basePathName}");
                         }
                     }
                     else
                     {
-                        MelonLogger.Warning($"****************************** Child {i} not found in {basePathName}");
+                        //Melonlogger.Warning($"****************************** Child {i} not found in {basePathName}");
                     }
                 }
             }
             else
             {
-                MelonLogger.Warning($"****************************** Base path not found: {basePathName}");
+                //Melonlogger.Warning($"****************************** Base path not found: {basePathName}");
             }
         }
 
         private static void DisableRockAnchorsAndRopes()
         {
-            MelonLogger.Msg("****************************** Disabling rock anchors and ropes");
+            //Melonlogger.Msg("****************************** Disabling rock anchors and ropes");
 
             for (int attempt = 0; attempt < 3; attempt++)
             {
                 if (attempt > 0)
                 {
-                    MelonLogger.Msg($"****************************** Retry attempt {attempt + 1}");
+                    //Melonlogger.Msg($"****************************** Retry attempt {attempt + 1}");
                     System.Threading.Thread.Sleep(100); // Wait 1/10 second
                 }
                 string[] rockAnchorsAndRopes = {

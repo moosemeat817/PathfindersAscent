@@ -39,14 +39,16 @@ namespace PathfindersAscent.SaveData
                     fenceShift = int.TryParse(deserializedData[1], out int result1) ? result1 : 0;
                     ashSnow = int.TryParse(deserializedData[2], out int result2) ? result2 : 0;
 
-                    MelonLogger.Msg($"[WanderersHeights] Data Loaded:" +
+                    /*
+                    Melonlogger.Msg($"[WanderersHeights] Data Loaded:" +
                                     $"\ngateDoor: {gateDoor}" +
                                     $"\nfenceShift: {fenceShift}" +
                                     $"\nashSnow: {ashSnow}");
+                    */
                 }
                 else
                 {
-                    MelonLogger.Msg("[WanderersHeights] No saved data found, using defaults");
+                    //Melonlogger.Msg("[WanderersHeights] No saved data found, using defaults");
                 }
 
                 reloadPending = false;
@@ -63,20 +65,22 @@ namespace PathfindersAscent.SaveData
                 string dataToSave = $"{gateDoor};{fenceShift};{ashSnow}";
                 dataManager.Save(dataToSave);
 
-                MelonLogger.Msg($"[YOURMOD] Data Saved:" +
+                /*
+                Melonlogger.Msg($"[YOURMOD] Data Saved:" +
                                 $"\ngateDoor: {gateDoor}" +
                                 $"\nfenceShift: {fenceShift}" +
                                 $"\nashSnow: {ashSnow}");
+                */
             }
             else
             {
                 if (dataManager == null)
                 {
-                    MelonLogger.Msg("[YOURMOD] SaveDataManager not initialized, cannot save data");
+                    //Melonlogger.Msg("[YOURMOD] SaveDataManager not initialized, cannot save data");
                 }
                 if (reloadPending)
                 {
-                    MelonLogger.Msg("[YOURMOD] Data load is pending, skipping save to prevent overwriting saved data");
+                    //Melonlogger.Msg("[YOURMOD] Data load is pending, skipping save to prevent overwriting saved data");
                 }
             }
         }

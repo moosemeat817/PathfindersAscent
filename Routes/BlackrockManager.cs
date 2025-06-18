@@ -14,26 +14,26 @@ namespace PathfindersAscent.Routes
         {
             if (string.IsNullOrEmpty(sceneName))
             {
-                MelonLogger.Warning("ProcessBlackrockRoutes called with null or empty scene name");
+                //Melonlogger.Warning("ProcessBlackrockRoutes called with null or empty scene name");
                 return;
             }
 
             switch (sceneName)
             {
                 case "BlackrockPrisonSurvivalZone":
-                    MelonLogger.Msg("Modifying Blackrock Prison");
+                    //Melonlogger.Msg("Modifying Blackrock Prison");
                     ModifyBlackrockPrison();
                     break;
                 case "BlackrockRegion":
-                    MelonLogger.Msg("Modifying Blackrock Region");
+                    //Melonlogger.Msg("Modifying Blackrock Region");
                     ModifyBlackrockRegion();
                     break;
                 case "BlackrockRegion_SANDBOX":
-                    MelonLogger.Msg("Modifying Blackrock Sandbox");
+                    //Melonlogger.Msg("Modifying Blackrock Sandbox");
                     ModifyBlackrockSandbox();
                     break;
                 default:
-                    MelonLogger.Msg($"No Blackrock route modifications for scene: {sceneName}");
+                    //Melonlogger.Msg($"No Blackrock route modifications for scene: {sceneName}");
                     break;
             }
         }
@@ -41,12 +41,12 @@ namespace PathfindersAscent.Routes
 
         private static void ModifyBlackrockPrison()
         {
-            MelonLogger.Msg("Starting Blackrock Prison modifications");
+            //Melonlogger.Msg("Starting Blackrock Prison modifications");
 
             try
             {
 
-                MelonLogger.Msg("******************************Place Snow Pile BRP");
+                //Melonlogger.Msg("******************************Place Snow Pile BRP");
                 // Define a helper method to instantiate objects
                 void InstantiatePrefab(string prefabName, Vector3 position, Vector3 rotation, Vector3 scale)
                 {
@@ -56,12 +56,12 @@ namespace PathfindersAscent.Routes
                 if (SaveDataManager.fenceShift == 0)
                 {
                     InstantiatePrefab("TRN_RockCliff_08_Med_A_Top_Prefab", new Vector3(-74.4238f, 208.8076f, 61.4438f), new Vector3(14.012f, 170.7239f, 354.0549f), new Vector3(0.8549f, 2.2f, 0.8549f));
-                    MelonLogger.Msg($"****************************** Fence LARGE Snow Pile set");
+                    //Melonlogger.Msg($"****************************** Fence LARGE Snow Pile set");
                 }
                 else
                 {
                     InstantiatePrefab("TRN_RockCliff_08_Med_A_Top_Prefab", new Vector3(-76.4238f, 207.7075f, 62.3438f), new Vector3(14.012f, 181.7239f, 354.0549f), new Vector3(0.8549f, 2.2f, 0.8549f));
-                    MelonLogger.Msg($"****************************** Fence SMALL Snow Pile set");
+                    //Melonlogger.Msg($"****************************** Fence SMALL Snow Pile set");
                 }
 
 
@@ -75,11 +75,11 @@ namespace PathfindersAscent.Routes
                 // Reposition objects
                 RepositionPrisonObjects();
 
-                MelonLogger.Msg("Completed Blackrock Prison modifications");
+                //Melonlogger.Msg("Completed Blackrock Prison modifications");
             }
             catch (System.Exception ex)
             {
-                MelonLogger.Error($"Error modifying Blackrock Prison: {ex.Message}");
+                //Melonlogger.Error($"Error modifying Blackrock Prison: {ex.Message}");
             }
         }
 
@@ -88,7 +88,7 @@ namespace PathfindersAscent.Routes
             var parent = GameObject.Find("RegionScene_Art");
             if (parent?.transform == null)
             {
-                MelonLogger.Warning("RegionScene_Art parent not found");
+                //Melonlogger.Warning("RegionScene_Art parent not found");
                 return;
             }
 
@@ -96,11 +96,11 @@ namespace PathfindersAscent.Routes
             if (child?.gameObject != null)
             {
                 child.gameObject.SetActive(true);
-                MelonLogger.Msg("Blackrock_ArtObject_ForHexSector enabled");
+                //Melonlogger.Msg("Blackrock_ArtObject_ForHexSector enabled");
             }
             else
             {
-                MelonLogger.Warning("Blackrock_ArtObject_ForHexSector not found");
+                //Melonlogger.Warning("Blackrock_ArtObject_ForHexSector not found");
             }
         }
 
@@ -158,27 +158,27 @@ namespace PathfindersAscent.Routes
 
         private static void ModifyBlackrockRegion()
         {
-            MelonLogger.Msg("Starting Blackrock Region modifications");
+            //Melonlogger.Msg("Starting Blackrock Region modifications");
 
             try
             {
                 // Log the current gate door value for debugging
-                MelonLogger.Msg($"****************************** Current gateDoor value: {SaveDataManager.gateDoor}");
+                //Melonlogger.Msg($"****************************** Current gateDoor value: {SaveDataManager.gateDoor}");
 
                 if (SaveDataManager.gateDoor == 0)
                 {
 
                     GameObject.Find("Design/Scripting/Transitions/PrisonGate/SURVIVAL_Only/InteriorLoadTrigger (1)").gameObject.SetActive(false);
-                    MelonLogger.Msg($"****************************** Gate Door set Inactive");
+                    //Melonlogger.Msg($"****************************** Gate Door set Inactive");
 
                 }
                 else
                 {
                     GameObject.Find("Design/Scripting/Transitions/PrisonGate/SURVIVAL_Only/InteriorLoadTrigger (1)").gameObject.SetActive(true);
-                    MelonLogger.Msg($"****************************** Gate Door set ACTIVE");
+                    //Melonlogger.Msg($"****************************** Gate Door set ACTIVE");
                 }
 
-                MelonLogger.Msg("******************************PlaceTerrain BRM");
+                //Melonlogger.Msg("******************************PlaceTerrain BRM");
                 // Define a helper method to instantiate objects
                 void InstantiatePrefab(string prefabName, Vector3 position, Vector3 rotation, Vector3 scale)
                 {
@@ -188,12 +188,12 @@ namespace PathfindersAscent.Routes
                 if (SaveDataManager.gateDoor == 0)
                 {
                     InstantiatePrefab("TRN_Mine_SnowPile_B_Prefab (4)", new Vector3(-185.8748f, 224.9003f, 5.2238f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1.4f, 1.2f));
-                    MelonLogger.Msg($"****************************** Gate Door LARGE Snow Pile set");
+                    //Melonlogger.Msg($"****************************** Gate Door LARGE Snow Pile set");
                 }
                 else
                 {
                     InstantiatePrefab("TRN_Mine_SnowPile_B_Prefab (4)", new Vector3(-185.8748f, 223.9002f, 5.9238f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1.4f, 1.2f));
-                    MelonLogger.Msg($"****************************** Gate Door SMALL Snow Pile set");
+                    //Melonlogger.Msg($"****************************** Gate Door SMALL Snow Pile set");
                 }
 
                 // Disable specified objects
@@ -219,11 +219,11 @@ namespace PathfindersAscent.Routes
                 // Reposition woods
                 RepositionMiscObjects();
 
-                MelonLogger.Msg("Completed Blackrock Region modifications");
+                //Melonlogger.Msg("Completed Blackrock Region modifications");
             }
             catch (System.Exception ex)
             {
-                MelonLogger.Error($"Error modifying Blackrock Region: {ex.Message}");
+                //Melonlogger.Error($"Error modifying Blackrock Region: {ex.Message}");
             }
         }
 
@@ -273,7 +273,7 @@ namespace PathfindersAscent.Routes
 
         private static void ModifyBlackrockSandbox()
         {
-            MelonLogger.Msg("Starting Blackrock Sandbox modifications");
+            //Melonlogger.Msg("Starting Blackrock Sandbox modifications");
 
             try
             {
@@ -299,11 +299,11 @@ namespace PathfindersAscent.Routes
                 RouteUtilities.SafeDisable("Root/Design/Loot/Knife/KnifeGroup2/GEAR_Knife");
                 RouteUtilities.SafeDisable("Root/Design/Loot/Knife/KnifeGroup2/CORPSE_Human_Frozen1");
 
-                MelonLogger.Msg("Completed Blackrock Sandbox modifications");
+                //Melonlogger.Msg("Completed Blackrock Sandbox modifications");
             }
             catch (System.Exception ex)
             {
-                MelonLogger.Error($"Error modifying Blackrock Sandbox: {ex.Message}");
+                //Melonlogger.Error($"Error modifying Blackrock Sandbox: {ex.Message}");
             }
         }
 

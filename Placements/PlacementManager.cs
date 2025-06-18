@@ -17,7 +17,7 @@ namespace PathfindersAscent.Placements
             {
                 if (mActiveScene == "BlackrockPrisonSurvivalZone")
                 {
-                    MelonLogger.Msg("******************************PlaceTerrain BRP");
+                    ////Melonlogger.Msg("******************************PlaceTerrain BRP");
                     // Define a helper method to instantiate objects
                     void InstantiatePrefab(string prefabName, Vector3 position, Vector3 rotation, Vector3 scale)
                     {
@@ -29,7 +29,7 @@ namespace PathfindersAscent.Placements
                 }
                 else if (mActiveScene == "BlackrockRegion")
                 {
-                    MelonLogger.Msg("******************************PlaceTerrain BRM");
+                    ////Melonlogger.Msg("******************************PlaceTerrain BRM");
                     // Define a helper method to instantiate objects
                     void InstantiatePrefab(string prefabName, Vector3 position, Vector3 rotation, Vector3 scale)
                     {
@@ -92,7 +92,7 @@ namespace PathfindersAscent.Placements
                 }
                 else if (mActiveScene == "AshCanyonRegion")
                 {
-                    MelonLogger.Msg("******************************Place Snow Blockage AC");
+                    //Melonlogger.Msg("******************************Place Snow Blockage AC");
                     // Define a helper method to instantiate objects
                     void InstantiatePrefab(string prefabName, Vector3 position, Vector3 rotation, Vector3 scale)
                     {
@@ -132,7 +132,7 @@ namespace PathfindersAscent.Placements
                 }
                 else if (mActiveScene == "CrashMountainRegion")
                 {
-                    MelonLogger.Msg("******************************PlaceTerrain TWM");
+                    //Melonlogger.Msg("******************************PlaceTerrain TWM");
                     // Define a helper method to instantiate objects
                     void InstantiatePrefab(string prefabName, Vector3 position, Vector3 rotation, Vector3 scale)
                     {
@@ -199,12 +199,12 @@ namespace PathfindersAscent.Placements
                 }
                 else
                 {
-                    MelonLogger.Msg($"Error: Unhandled scene '{mActiveScene}'. No terrain objects placed.");
+                    //Melonlogger.Msg($"Error: Unhandled scene '{mActiveScene}'. No terrain objects placed.");
                 }
             }
             catch (System.Exception ex)
             {
-                MelonLogger.Msg($"Exception occurred while placing terrain: {ex.Message}\n{ex.StackTrace}");
+                //Melonlogger.Msg($"Exception occurred while placing terrain: {ex.Message}\n{ex.StackTrace}");
             }
         }
         public static void PlaceAssets()
@@ -212,7 +212,7 @@ namespace PathfindersAscent.Placements
             string scene = GameManager.m_ActiveScene;
             if (scene == "BlackrockPrisonSurvivalZone")
             {
-                MelonLogger.Msg("******************************PlaceAssets BRP");
+                //Melonlogger.Msg("******************************PlaceAssets BRP");
                 // Placing OBJ_MineRock23
                 Vector3 pos2 = new Vector3(-212.2483f, 226.8166f, 143.2502f);
                 Vector3 rot2 = new Vector3(359f, 313.5636f, 357.7269f);
@@ -227,7 +227,7 @@ namespace PathfindersAscent.Placements
             }
             else if (scene == "BlackrockRegion")
             {
-                MelonLogger.Msg("******************************PlaceAssets BRM");
+                //Melonlogger.Msg("******************************PlaceAssets BRM");
                 // Placing STR_CoastalHouseHFloorWood
                 Vector3 pos = new Vector3(-349.8026f, 278.0271f, -149.2507f);
                 Vector3 rot = new Vector3(0.0182f, 229.7852f, 359.88f);
@@ -235,7 +235,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("STR_CoastalHouseHFloorWood", pos, rot, scale);
 
 
-                MelonLogger.Msg("******************************PlaceAssets BRM");
+                //Melonlogger.Msg("******************************PlaceAssets BRM");
                 // Placing OBJ_WoodPlankSingle
                 Vector3 pos2 = new Vector3(-350.3057f, 282.2212f, -148.9428f);
                 Vector3 rot2 = new Vector3(-0f, 51.094f, 35f);
@@ -244,7 +244,7 @@ namespace PathfindersAscent.Placements
 
 
 
-                MelonLogger.Msg("******************************PlaceAssets BRM");
+                //Melonlogger.Msg("******************************PlaceAssets BRM");
                 // Placing OBJ_WoodPlankSingle
                 Vector3 pos3 = new Vector3(-350.6457f, 282.0612f, -148.9428f);
                 Vector3 rot3 = new Vector3(-0f, 51.094f, 35f);
@@ -252,7 +252,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos3, rot3, scale3);
 
 
-                MelonLogger.Msg("******************************PlaceAssets BRM");
+                //Melonlogger.Msg("******************************PlaceAssets BRM");
                 // Placing OBJ_WoodPlankSingle
                 Vector3 pos4 = new Vector3(-350.1058f, 282.2812f, -148.7828f);
                 Vector3 rot4 = new Vector3(-0f, 51.094f, 34.5001f);
@@ -260,7 +260,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos4, rot4, scale4);
 
 
-                MelonLogger.Msg("******************************PlaceAssets BRM");
+                //Melonlogger.Msg("******************************PlaceAssets BRM");
                 // Placing OBJ_WoodPlankSingle
                 Vector3 pos5 = new Vector3(-349.6557f, 282.2411f, -148.4428f);
                 Vector3 rot5 = new Vector3(-0f, 51.094f, 35f);
@@ -268,7 +268,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos5, rot5, scale5);
 
 
-                MelonLogger.Msg("******************************PlaceAssets BRM");
+                //Melonlogger.Msg("******************************PlaceAssets BRM");
                 // Placing OBJ_WoodPlankSingle
                 Vector3 pos6 = new Vector3(-349.9053f, 282.2212f, -148.593f);
                 Vector3 rot6 = new Vector3(-0f, 51.094f, 35f);
@@ -279,7 +279,7 @@ namespace PathfindersAscent.Placements
             }
             else if (scene == "CrashMountainRegion")
             {
-                MelonLogger.Msg("******************************PlaceAssets TWM");
+                //Melonlogger.Msg("******************************PlaceAssets TWM");
                 // Placing Cabin Floor
                 Vector3 pos = new Vector3(977.8206f, 514.5352f, 1305.487f);
                 Vector3 rot = new Vector3(358.64f, 232.8071f, 0.1197f);
@@ -287,7 +287,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("STR_CoastalHouseHFloorWood", pos, rot, scale);
             
                 
-                MelonLogger.Msg("******************************PlaceAssets TWM");
+                //Melonlogger.Msg("******************************PlaceAssets TWM");
                 // Placing OBJ_WoodPlankSingle
                 Vector3 pos2 = new Vector3(979.0076f, 518.4626f, 1302.983f);
                 Vector3 rot2 = new Vector3(2.3f, 54.4506f, 325.3022f);
@@ -296,7 +296,7 @@ namespace PathfindersAscent.Placements
 
 
 
-                MelonLogger.Msg("******************************PlaceAssets TWM");
+                //Melonlogger.Msg("******************************PlaceAssets TWM");
                 // Placing OBJ_WoodPlankSingle
                 Vector3 pos3 = new Vector3(979.2538f, 518.4526f, 1303.133f);
                 Vector3 rot3 = new Vector3(2.3f, 54.907f, 325.3022f);
@@ -304,7 +304,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos3, rot3, scale3);
 
 
-                MelonLogger.Msg("******************************PlaceAssets TWM");
+                //Melonlogger.Msg("******************************PlaceAssets TWM");
                 // Placing OBJ_WoodPlankSingle
                 Vector3 pos4 = new Vector3(979.2891f, 518.6428f, 1303.503f);
                 Vector3 rot4 = new Vector3(2.3f, 54.4506f, 325.3022f);
@@ -312,7 +312,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos4, rot4, scale4);
 
 
-                MelonLogger.Msg("******************************PlaceAssets TWM");
+                //Melonlogger.Msg("******************************PlaceAssets TWM");
                 // Placing OBJ_WoodPlankSingle
                 Vector3 pos5 = new Vector3(979.5192f, 518.6227f, 1303.647f);
                 Vector3 rot5 = new Vector3(2.3f, 54.4506f, 325.3022f);
@@ -320,7 +320,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos5, rot5, scale5);
 
 
-                MelonLogger.Msg("******************************PlaceAssets TWM");
+                //Melonlogger.Msg("******************************PlaceAssets TWM");
                 // Placing OBJ_WoodPlankSingle
                 Vector3 pos6 = new Vector3(979.8314f, 518.5507f, 1303.703f);
                 Vector3 rot6 = new Vector3(2.3f, 54.4506f, 325.3022f);
@@ -328,7 +328,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos6, rot6, scale6);
 
 
-                MelonLogger.Msg("******************************PlaceAssets TWM");
+                //Melonlogger.Msg("******************************PlaceAssets TWM");
                 // Placing OBJ_MineRock23
                 Vector3 pos7 = new Vector3(1186.87f, 348.5399f, 1356.884f);
                 Vector3 rot7 = new Vector3(0.0f, 0.0f, 0.0f);
@@ -336,7 +336,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("OBJ_MineRock23", pos7, rot7, scale7);
 
 
-                MelonLogger.Msg("******************************PlaceAssets TWM");
+                //Melonlogger.Msg("******************************PlaceAssets TWM");
                 // Placing OBJ_MineRock23
                 Vector3 pos8 = new Vector3(1343.703f, 50.828f, 870.0862f);
                 Vector3 rot8 = new Vector3(0.0f, 16.1009f, 0.0f);
@@ -344,7 +344,7 @@ namespace PathfindersAscent.Placements
                 SceneUtils.PlaceAssetsInScene("OBJ_MineRock23", pos8, rot8, scale8);
 
 
-                MelonLogger.Msg("******************************PlaceAssets TWM");
+                //Melonlogger.Msg("******************************PlaceAssets TWM");
                 // Placing OBJ_MineRock23
                 Vector3 pos9 = new Vector3(1329.064f, 50.928f, 876.6658f);
                 Vector3 rot9 = new Vector3(-0, 224.0159f, 0f);

@@ -11,17 +11,17 @@ namespace PathfindersAscent.Routes
         {
             if (objectPaths == null)
             {
-                MelonLogger.Warning("****************************** Object paths array is null");
+                //Melonlogger.Warning("****************************** Object paths array is null");
                 return;
             }
 
-            MelonLogger.Msg("****************************** Disabling multiple game objects");
+            //Melonlogger.Msg("****************************** Disabling multiple game objects");
             int disabledCount = 0;
             foreach (string path in objectPaths)
             {
                 if (string.IsNullOrEmpty(path))
                 {
-                    MelonLogger.Warning("****************************** Null or empty path found in array");
+                    //Melonlogger.Warning("****************************** Null or empty path found in array");
                     continue;
                 }
 
@@ -30,14 +30,14 @@ namespace PathfindersAscent.Routes
                 {
                     obj.SetActive(false);
                     disabledCount++;
-                    MelonLogger.Msg($"****************************** Disabled object: {path}");
+                    //Melonlogger.Msg($"****************************** Disabled object: {path}");
                 }
                 else
                 {
-                    MelonLogger.Warning($"****************************** Failed to find object to disable: {path}");
+                    //Melonlogger.Warning($"****************************** Failed to find object to disable: {path}");
                 }
             }
-            MelonLogger.Msg($"****************************** Disabled {disabledCount} out of {objectPaths.Length} objects");
+            //Melonlogger.Msg($"****************************** Disabled {disabledCount} out of {objectPaths.Length} objects");
         }
 
         // Utility method for safely disabling objects (doesn't warn if not found)
@@ -45,7 +45,7 @@ namespace PathfindersAscent.Routes
         {
             if (string.IsNullOrEmpty(objectPath))
             {
-                MelonLogger.Warning("****************************** Null or empty object path provided");
+                //Melonlogger.Warning("****************************** Null or empty object path provided");
                 return;
             }
 
@@ -53,11 +53,11 @@ namespace PathfindersAscent.Routes
             if (obj != null)
             {
                 obj.SetActive(false);
-                MelonLogger.Msg($"****************************** Safely disabled optional object: {objectPath}");
+                //Melonlogger.Msg($"****************************** Safely disabled optional object: {objectPath}");
             }
             else
             {
-                MelonLogger.Msg($"****************************** Optional object not found (this is expected): {objectPath}");
+                //Melonlogger.Msg($"****************************** Optional object not found (this is expected): {objectPath}");
             }
         }
 
@@ -66,17 +66,17 @@ namespace PathfindersAscent.Routes
         {
             if (string.IsNullOrEmpty(parentPath))
             {
-                MelonLogger.Warning("****************************** Null or empty parent path provided");
+                //Melonlogger.Warning("****************************** Null or empty parent path provided");
                 return;
             }
 
             if (childIndices == null)
             {
-                MelonLogger.Warning("****************************** Child indices array is null");
+                //Melonlogger.Warning("****************************** Child indices array is null");
                 return;
             }
 
-            MelonLogger.Msg($"****************************** Disabling children by index for parent: {parentPath}");
+            //Melonlogger.Msg($"****************************** Disabling children by index for parent: {parentPath}");
             GameObject parent = GameObject.Find(parentPath);
             if (parent != null)
             {
@@ -88,22 +88,22 @@ namespace PathfindersAscent.Routes
                         if (child != null)
                         {
                             child.gameObject.SetActive(false);
-                            MelonLogger.Msg($"****************************** Disabled child at index {index}");
+                            //Melonlogger.Msg($"****************************** Disabled child at index {index}");
                         }
                         else
                         {
-                            MelonLogger.Warning($"****************************** Child at index {index} is null");
+                            //Melonlogger.Warning($"****************************** Child at index {index} is null");
                         }
                     }
                     else
                     {
-                        MelonLogger.Warning($"****************************** Child index {index} out of range for {parentPath} (childCount: {parent.transform.childCount})");
+                        //Melonlogger.Warning($"****************************** Child index {index} out of range for {parentPath} (childCount: {parent.transform.childCount})");
                     }
                 }
             }
             else
             {
-                MelonLogger.Warning($"****************************** Parent object not found: {parentPath}");
+                //Melonlogger.Warning($"****************************** Parent object not found: {parentPath}");
             }
         }
 
@@ -112,17 +112,17 @@ namespace PathfindersAscent.Routes
         {
             if (string.IsNullOrEmpty(parentPath))
             {
-                MelonLogger.Warning("****************************** Null or empty parent path provided");
+                //Melonlogger.Warning("****************************** Null or empty parent path provided");
                 return;
             }
 
             if (childIndices == null)
             {
-                MelonLogger.Warning("****************************** Child indices array is null");
+                //Melonlogger.Warning("****************************** Child indices array is null");
                 return;
             }
 
-            MelonLogger.Msg($"****************************** Enabling children by index for parent: {parentPath}");
+            //Melonlogger.Msg($"****************************** Enabling children by index for parent: {parentPath}");
             GameObject parent = GameObject.Find(parentPath);
             if (parent != null)
             {
@@ -134,22 +134,22 @@ namespace PathfindersAscent.Routes
                         if (child != null)
                         {
                             child.gameObject.SetActive(true);
-                            MelonLogger.Msg($"****************************** Enabled child at index {index}");
+                            //Melonlogger.Msg($"****************************** Enabled child at index {index}");
                         }
                         else
                         {
-                            MelonLogger.Warning($"****************************** Child at index {index} is null");
+                            //Melonlogger.Warning($"****************************** Child at index {index} is null");
                         }
                     }
                     else
                     {
-                        MelonLogger.Warning($"****************************** Child index {index} out of range for {parentPath} (childCount: {parent.transform.childCount})");
+                        //Melonlogger.Warning($"****************************** Child index {index} out of range for {parentPath} (childCount: {parent.transform.childCount})");
                     }
                 }
             }
             else
             {
-                MelonLogger.Warning($"****************************** Parent object not found: {parentPath}");
+                //Melonlogger.Warning($"****************************** Parent object not found: {parentPath}");
             }
         }
 
@@ -158,18 +158,18 @@ namespace PathfindersAscent.Routes
         {
             if (objects == null)
             {
-                MelonLogger.Warning($"****************************** Objects dictionary is null for {objectType}");
+                //Melonlogger.Warning($"****************************** Objects dictionary is null for {objectType}");
                 return;
             }
 
-            MelonLogger.Msg($"****************************** Beginning {objectType} repositioning");
+            //Melonlogger.Msg($"****************************** Beginning {objectType} repositioning");
 
             int repositionedCount = 0;
             foreach (var obj in objects)
             {
                 if (string.IsNullOrEmpty(obj.Key))
                 {
-                    MelonLogger.Warning($"****************************** Null or empty key found in {objectType} dictionary");
+                    //Melonlogger.Warning($"****************************** Null or empty key found in {objectType} dictionary");
                     continue;
                 }
 
@@ -181,14 +181,14 @@ namespace PathfindersAscent.Routes
                         Quaternion.Euler(obj.Value.rotation)
                     );
                     repositionedCount++;
-                    MelonLogger.Msg($"****************************** Repositioned {objectType.TrimEnd('s')}: {obj.Key}");
+                    //Melonlogger.Msg($"****************************** Repositioned {objectType.TrimEnd('s')}: {obj.Key}");
                 }
                 else
                 {
-                    MelonLogger.Warning($"****************************** Failed to find {objectType.TrimEnd('s')} object: {obj.Key}");
+                    //Melonlogger.Warning($"****************************** Failed to find {objectType.TrimEnd('s')} object: {obj.Key}");
                 }
             }
-            MelonLogger.Msg($"****************************** Repositioned {repositionedCount} {objectType}");
+            //Melonlogger.Msg($"****************************** Repositioned {repositionedCount} {objectType}");
         }
 
         // Overloaded utility method to reposition objects with optional scaling
@@ -196,18 +196,18 @@ namespace PathfindersAscent.Routes
         {
             if (objects == null)
             {
-                MelonLogger.Warning($"****************************** Objects dictionary is null for {objectType}");
+                //Melonlogger.Warning($"****************************** Objects dictionary is null for {objectType}");
                 return;
             }
 
-            MelonLogger.Msg($"****************************** Beginning {objectType} repositioning");
+            //Melonlogger.Msg($"****************************** Beginning {objectType} repositioning");
 
             int repositionedCount = 0;
             foreach (var obj in objects)
             {
                 if (string.IsNullOrEmpty(obj.Key))
                 {
-                    MelonLogger.Warning($"****************************** Null or empty key found in {objectType} dictionary");
+                    //Melonlogger.Warning($"****************************** Null or empty key found in {objectType} dictionary");
                     continue;
                 }
 
@@ -223,18 +223,18 @@ namespace PathfindersAscent.Routes
                     if (obj.Value.scale.HasValue)
                     {
                         gameObj.transform.localScale = obj.Value.scale.Value;
-                        MelonLogger.Msg($"****************************** Applied scale to {objectType.TrimEnd('s')}: {obj.Key}");
+                        //Melonlogger.Msg($"****************************** Applied scale to {objectType.TrimEnd('s')}: {obj.Key}");
                     }
 
                     repositionedCount++;
-                    MelonLogger.Msg($"****************************** Repositioned {objectType.TrimEnd('s')}: {obj.Key}");
+                    //Melonlogger.Msg($"****************************** Repositioned {objectType.TrimEnd('s')}: {obj.Key}");
                 }
                 else
                 {
-                    MelonLogger.Warning($"****************************** Failed to find {objectType.TrimEnd('s')} object: {obj.Key}");
+                    //Melonlogger.Warning($"****************************** Failed to find {objectType.TrimEnd('s')} object: {obj.Key}");
                 }
             }
-            MelonLogger.Msg($"****************************** Repositioned {repositionedCount} {objectType}");
+            //Melonlogger.Msg($"****************************** Repositioned {repositionedCount} {objectType}");
         }
 
         // Legacy method names for backwards compatibility

@@ -14,15 +14,15 @@ namespace PathfindersAscent.Routes
             switch (sceneName)
             {
                 case "AshCanyonRegion":
-                    MelonLogger.Msg("****************************** Modifying Ash Canyon");
+                    //Melonlogger.Msg("****************************** Modifying Ash Canyon");
                     ModifyAshCanyon();
                     break;
                 case "AshCanyonRegion_SANDBOX":
-                    MelonLogger.Msg("****************************** Modifying Ash Canyon Sandbox");
+                    //Melonlogger.Msg("****************************** Modifying Ash Canyon Sandbox");
                     ModifyAshCanyonSandbox();
                     break;
                 default:
-                    MelonLogger.Msg($"****************************** No Ash Canyon route modifications for scene: {sceneName}");
+                    //Melonlogger.Msg($"****************************** No Ash Canyon route modifications for scene: {sceneName}");
                     break;
             }
         }
@@ -33,7 +33,7 @@ namespace PathfindersAscent.Routes
 
         private static void ModifyAshCanyon()
         {
-            MelonLogger.Msg("****************************** Starting Ash Canyon modifications");
+            //Melonlogger.Msg("****************************** Starting Ash Canyon modifications");
 
             void InstantiatePrefab(string prefabName, Vector3 position, Vector3 rotation, Vector3 scale)
             {
@@ -45,21 +45,21 @@ namespace PathfindersAscent.Routes
                 InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-264.1084f, 128.2418f, 427.6711f), new Vector3(0f, 77.2727f, 350f), new Vector3(0.55f, 8f, 0.6f));
                 InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-255.3939f, 128.5015f, 435.8627f), new Vector3(17.4743f, 221.4987f, 37.2928f), new Vector3(0.4f, 3f, 0.4f));
                 InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-257.994f, 136.5641f, 433.8904f), new Vector3(351.232f, 214.8323f, 48.2179f), new Vector3(0.4f, 2f, 0.4f));
-                MelonLogger.Msg("******************************Placed snow blockers");
+                //Melonlogger.Msg("******************************Placed snow blockers");
             }
             else
             {
                 InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-264.1084f, 112.842f, 427.6711f), new Vector3(0f, 77.2727f, 350f), new Vector3(0.55f, 8f, 0.6f));
                 InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-262.4342f, 132.3051f, 440.145f), new Vector3(73.938f, 237.0918f, -0.0002f), new Vector3(0.3f, 2.5f, 0.3f));
                 InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-273.3336f, 136.5641f, 433.8904f), new Vector3(351.232f, 214.8323f, 48.2179f), new Vector3(0.4f, 2f, 0.4f));
-                MelonLogger.Msg("******************************Receeded snow blockers");
+                //Melonlogger.Msg("******************************Receeded snow blockers");
             }
 
 
 
 
             // Disable ropes and anchors
-            MelonLogger.Msg("****************************** Disabling ropes and anchors");
+            //Melonlogger.Msg("****************************** Disabling ropes and anchors");
             string[] objectsToDisable = new string[] {
                 "Root/Art/Interactive/INTERACTIVE_RopeCliff_08_50m (3)/TRN_RockAnchor01",
                 "Root/Art/Interactive/INTERACTIVE_RopeCliff_08_50m (3)/Rope_50m",
@@ -137,10 +137,10 @@ namespace PathfindersAscent.Routes
             RouteUtilities.RepositionObjects(structureObjects, "structures and objects");
 
             // Disable central peak rock
-            MelonLogger.Msg("****************************** Disabling central peak rock");
+            //Melonlogger.Msg("****************************** Disabling central peak rock");
             RouteUtilities.DisableChildrenByIndex("Root/Art/GrayBlock/CentralPeak_Rocks", new int[] { 27 });
 
-            MelonLogger.Msg("****************************** Completed Ash Canyon modifications");
+            //Melonlogger.Msg("****************************** Completed Ash Canyon modifications");
         }
 
         // ------------------------------------------------------------------------------------------------------------------
@@ -148,7 +148,7 @@ namespace PathfindersAscent.Routes
         // ------------------------------------------------------------------------------------------------------------------
         private static void ModifyAshCanyonSandbox()
         {
-            MelonLogger.Msg("****************************** Starting Ash Canyon Sandbox modifications");
+            //Melonlogger.Msg("****************************** Starting Ash Canyon Sandbox modifications");
 
             // Disable rose hip climb shrub
             RouteUtilities.SafeDisable("Root/Design/Interactive/INTERACTIVE_RoseHipClimbShrubHarvest (3)");
@@ -188,7 +188,7 @@ namespace PathfindersAscent.Routes
 
             RouteUtilities.RepositionObjects(miscObjects, "misc objects");
 
-            MelonLogger.Msg("****************************** Completed Ash Canyon Sandbox modifications");
+            //Melonlogger.Msg("****************************** Completed Ash Canyon Sandbox modifications");
         }
 
         public static void RepositionPlayerSpawnPoints()

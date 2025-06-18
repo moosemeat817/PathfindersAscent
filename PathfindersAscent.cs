@@ -28,11 +28,11 @@ namespace PathfindersAscent
             try
             {
                 Settings.OnLoad();
-                MelonLogger.Msg("Settings loaded successfully");
+                //MelonLogger.Msg("Settings loaded successfully");
             }
             catch (System.Exception ex)
             {
-                MelonLogger.Error($"Failed to load settings: {ex.Message}");
+                //MelonLogger.Error($"Failed to load settings: {ex.Message}");
             }
         }
 
@@ -42,7 +42,7 @@ namespace PathfindersAscent
 
             if (obj == null)
             {
-                MelonLogger.Warning("DisableMapDetail called with null GameObject");
+                //MelonLogger.Warning("DisableMapDetail called with null GameObject");
                 return;
             }
 
@@ -50,13 +50,13 @@ namespace PathfindersAscent
             if (activeScene != "CrashMountainRegion")
                 return;
 
-            MelonLogger.Msg("MapPatch - Processing CrashMountainRegion");
+            //MelonLogger.Msg("MapPatch - Processing CrashMountainRegion");
 
             var mapDetail = obj.GetComponent<MapDetail>();
             if (mapDetail != null)
             {
                 mapDetail.enabled = false;
-                MelonLogger.Msg("MapPatch - MapDetail component disabled");
+                //MelonLogger.Msg("MapPatch - MapDetail component disabled");
             }
         }
 
@@ -65,7 +65,7 @@ namespace PathfindersAscent
         {
             SaveDataManager.gateDoor = newValue;
             SaveDataManager.SaveData(); // Save immediately when changed
-            MelonLogger.Msg("******************************UpdateGateDoor Saved!");
+            //MelonLogger.Msg("******************************UpdateGateDoor Saved!");
         }
 
 
@@ -73,7 +73,7 @@ namespace PathfindersAscent
         {
             SaveDataManager.fenceShift = newValue;
             SaveDataManager.SaveData(); // Save immediately when changed
-            MelonLogger.Msg("******************************UpdateFenceShift Saved!");
+            //MelonLogger.Msg("******************************UpdateFenceShift Saved!");
         }
 
 
@@ -81,13 +81,13 @@ namespace PathfindersAscent
         {
             SaveDataManager.ashSnow = newValue;
             SaveDataManager.SaveData(); // Save immediately when changed
-            MelonLogger.Msg("******************************UpdateAshSnow Saved!");
+            //MelonLogger.Msg("******************************UpdateAshSnow Saved!");
         }
 
 
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
-            MelonLogger.Msg($"****************************** Scene initialized: {sceneName} (Build Index: {buildIndex})");
+            //MelonLogger.Msg($"****************************** Scene initialized: {sceneName} (Build Index: {buildIndex})");
 
             if (IsModEnabled())
             {
@@ -138,30 +138,30 @@ namespace PathfindersAscent
         {
             if (string.IsNullOrEmpty(sceneName))
             {
-                MelonLogger.Warning("ProcessSceneRoutes called with null or empty scene name");
+                //MelonLogger.Warning("ProcessSceneRoutes called with null or empty scene name");
                 return;
             }
 
-            MelonLogger.Msg($"Processing routes for {sceneName}");
+            //MelonLogger.Msg($"Processing routes for {sceneName}");
 
             if (sceneName.Contains("Blackrock"))
             {
-                MelonLogger.Msg("Calling BlackrockManager");
+                //MelonLogger.Msg("Calling BlackrockManager");
                 BlackrockManager.ProcessBlackrockRoutes(sceneName);
             }
             else if (sceneName.Contains("AshCanyon"))
             {
-                MelonLogger.Msg("Calling AshCanyonManager");
+                //MelonLogger.Msg("Calling AshCanyonManager");
                 AshCanyonManager.ProcessAshCanyonRoutes(sceneName);
             }
             else if (sceneName.Contains("CrashMountain"))
             {
-                MelonLogger.Msg("Calling TimberwolfMountainManager");
+                //MelonLogger.Msg("Calling TimberwolfMountainManager");
                 TimberwolfMountainManager.ProcessTimberwolfMountainRoutes(sceneName);
             }
             else
             {
-                MelonLogger.Msg($"No extreme route modifications for scene: {sceneName}");
+                //MelonLogger.Msg($"No extreme route modifications for scene: {sceneName}");
             }
         }
 
@@ -169,13 +169,13 @@ namespace PathfindersAscent
         {
             if (string.IsNullOrEmpty(sceneName))
             {
-                MelonLogger.Warning("OnSceneWasLoaded called with null or empty scene name");
+                //MelonLogger.Warning("OnSceneWasLoaded called with null or empty scene name");
                 return;
             }
 
             if (!IsModEnabled())
             {
-                MelonLogger.Msg("Pathfinders Ascent mod is disabled - skipping scene loading operations");
+                //MelonLogger.Msg("Pathfinders Ascent mod is disabled - skipping scene loading operations");
                 return;
             }
 
@@ -216,13 +216,13 @@ namespace PathfindersAscent
 
             try
             {
-                MelonLogger.Msg("Calling PlaceTerrain");
+                //MelonLogger.Msg("Calling PlaceTerrain");
                 PlacementManager.PlaceTerrain();
 
-                MelonLogger.Msg("Calling PlaceAssets");
+                //MelonLogger.Msg("Calling PlaceAssets");
                 PlacementManager.PlaceAssets();
 
-                MelonLogger.Msg("Calling Clones");
+                //MelonLogger.Msg("Calling Clones");
                 CloneManager.ChangeObjects();
 
                 ProcessSceneSpecificSpawns(sceneName);
@@ -238,17 +238,16 @@ namespace PathfindersAscent
             switch (sceneName)
             {
                 case "BlackrockRegion":
-                    MelonLogger.Msg("Processing Blackrock Spawns");
+                    //MelonLogger.Msg("Processing Blackrock Spawns");
                     BlackrockManager.RepositionPlayerSpawnPoints();
                     break;
                 case "AshCanyonRegion":
-                    MelonLogger.Msg("Processing Ash Canyon Spawns");
+                    //MelonLogger.Msg("Processing Ash Canyon Spawns");
                     AshCanyonManager.RepositionPlayerSpawnPoints();
                     break;
                 case "CrashMountainRegion":
-                    MelonLogger.Msg("Processing Timberwolf Mountain Spawns");
+                    //MelonLogger.Msg("Processing Timberwolf Mountain Spawns");
                     TimberwolfMountainManager.RepositionPlayerSpawnPoints();
-                    MelonLogger.Msg("Configuring Cargo Containers");
                     break;
             }
         }
@@ -258,7 +257,7 @@ namespace PathfindersAscent
 
         private void ProcessWildlife(string sceneName)
         {
-            MelonLogger.Msg("Wildlife Relocation enabled - Processing wildlife");
+            //MelonLogger.Msg("Wildlife Relocation enabled - Processing wildlife");
             WildlifeManager.ProcessWildlife(sceneName);
         }
 

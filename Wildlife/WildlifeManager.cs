@@ -12,7 +12,7 @@ namespace PathfindersAscent.Routes
         public static void ProcessWildlife(string sceneName)
         {
                 
-            MelonLogger.Msg($"****************************** Processing wildlife for scene: {sceneName}");
+            //Melonlogger.Msg($"****************************** Processing wildlife for scene: {sceneName}");
             
             switch(sceneName)
             {
@@ -26,7 +26,7 @@ namespace PathfindersAscent.Routes
                     ProcessTimberwolfMountainWildlife();
                     break;
                 default:
-                    MelonLogger.Msg($"****************************** No wildlife modifications needed for: {sceneName}");
+                    //Melonlogger.Msg($"****************************** No wildlife modifications needed for: {sceneName}");
                     break;
             }
         }
@@ -37,7 +37,7 @@ namespace PathfindersAscent.Routes
         // ------------------------------------------------------------------------------------------------------------------
         private static void ProcessAshCanyonWildlife()
         {
-            MelonLogger.Msg("****************************** Ash Canyon WILDLIFE");
+            //Melonlogger.Msg("****************************** Ash Canyon WILDLIFE");
             
             // Enable wolf spawn regions
             // EnableWolfSpawnRegions("Root/Wolf_misc", new int[] { 4, 6, 5, -1, 1, 2, 3, 7 });
@@ -70,11 +70,11 @@ namespace PathfindersAscent.Routes
                 if (obj != null)
                 {
                     obj.SetActive(true);
-                    MelonLogger.Msg($"****************************** Enabled {objectPath}");
+                    //Melonlogger.Msg($"****************************** Enabled {objectPath}");
                 }
                 else
                 {
-                    MelonLogger.Warning($"****************************** Failed to find {objectPath}");
+                    //Melonlogger.Warning($"****************************** Failed to find {objectPath}");
                 }
             }
         }
@@ -83,7 +83,7 @@ namespace PathfindersAscent.Routes
         {
             // Dictionary to store moose repositioning data
             var mooseRepositioning = new Dictionary<string, Vector3> {
-                { "Root/Moose/SPAWNREGION_Moose (2)", new Vector3(186.73f, 139.96f, -314.70f) },
+                { "Root/Moose/SPAWNREGION_Moose (2)", new Vector3(5.47f, 77.88f, 348.90f) },
                 { "Root/Moose/SPAWNREGION_Moose (3)", new Vector3(427.59f, 56.49f, -465.23f) },
                 { "Root/Moose/SPAWNREGION_Moose (4)", new Vector3(-15.68f, 127.09f, -33.12f) }
             };
@@ -134,11 +134,11 @@ namespace PathfindersAscent.Routes
                         pair.Value, 
                         Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f))
                     );
-                    MelonLogger.Msg($"****************************** Repositioned {pair.Key}");
+                    //Melonlogger.Msg($"****************************** Repositioned {pair.Key}");
                 }
                 else
                 {
-                    MelonLogger.Warning($"****************************** Failed to find {pair.Key}");
+                    //Melonlogger.Warning($"****************************** Failed to find {pair.Key}");
                 }
             }
         }
@@ -148,7 +148,7 @@ namespace PathfindersAscent.Routes
         // ------------------------------------------------------------------------------------------------------------------
         private static void ProcessBlackrockWildlife()
         {
-            MelonLogger.Msg("****************************** Blackrock Wildlife");
+            //Melonlogger.Msg("****************************** Blackrock Wildlife");
             
             // Enable wolf spawn regions
             // EnableBlackrockWolves();
@@ -177,11 +177,11 @@ namespace PathfindersAscent.Routes
                 if (obj != null)
                 {
                     obj.SetActive(true);
-                    MelonLogger.Msg($"****************************** Enabled {region}");
+                    //Melonlogger.Msg($"****************************** Enabled {region}");
                 }
                 else
                 {
-                    MelonLogger.Warning($"****************************** Failed to find {region}");
+                    //Melonlogger.Warning($"****************************** Failed to find {region}");
                 }
             }
         }
@@ -245,11 +245,11 @@ namespace PathfindersAscent.Routes
             if (decal != null)
             {
                 decal.SetActive(false);
-                MelonLogger.Msg($"****************************** Disabled moose scratch decal: {decalPath}");
+                //Melonlogger.Msg($"****************************** Disabled moose scratch decal: {decalPath}");
             }
             else
             {
-                MelonLogger.Warning($"****************************** Failed to find moose scratch decal: {decalPath}");
+                //Melonlogger.Warning($"****************************** Failed to find moose scratch decal: {decalPath}");
             }
         }
 
@@ -258,7 +258,7 @@ namespace PathfindersAscent.Routes
         // ------------------------------------------------------------------------------------------------------------------
         private static void ProcessTimberwolfMountainWildlife()
         {
-            MelonLogger.Msg("****************************** TWM WILDLIFE");
+            //Melonlogger.Msg("****************************** TWM WILDLIFE");
             
             // Reposition Timberwolves
             RepositionTWMTimberwolves();
@@ -299,13 +299,13 @@ namespace PathfindersAscent.Routes
                     new Vector3(745.23f, 208.71f, 83.22f),
                     Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f))
                 );
-                MelonLogger.Msg("****************************** Enabled plane surprise wolf");
+                //Melonlogger.Msg("****************************** Enabled plane surprise wolf");
             }
         }
         
         private static void ProcessTWMMoose()
         {
-            MelonLogger.Msg("****************************** TWM WILDLIFE - Moose 1");
+            //Melonlogger.Msg("****************************** TWM WILDLIFE - Moose 1");
             
             // Reposition first moose
             GameObject moose1 = GameObject.Find("WildlifeSpawns/Moose/MooseSetPlane/SPAWNREGION_Moose");
@@ -321,7 +321,7 @@ namespace PathfindersAscent.Routes
                 DisableTWMMooseDecals("WildlifeSpawns/Moose/MooseSetPlane", "FX_DecalMooseScratchDeadTree_A01", 6, 8);
             }
             
-            MelonLogger.Msg("****************************** TWM WILDLIFE - Moose 2");
+            //Melonlogger.Msg("****************************** TWM WILDLIFE - Moose 2");
             
             // Reposition second moose
             GameObject moose2 = GameObject.Find("WildlifeSpawns/Moose/MooseSetRiver/SPAWNREGION_Moose");
@@ -356,18 +356,18 @@ namespace PathfindersAscent.Routes
                 if (decal != null)
                 {
                     decal.SetActive(false);
-                    MelonLogger.Msg($"****************************** Disabled decal: {decalPath}");
+                    //Melonlogger.Msg($"****************************** Disabled decal: {decalPath}");
                 }
                 else
                 {
-                    MelonLogger.Warning($"****************************** Failed to find decal: {decalPath}");
+                    //Melonlogger.Warning($"****************************** Failed to find decal: {decalPath}");
                 }
             }
         }
 
         private static void ProcessTWMWolfSingles()
         {
-            MelonLogger.Msg("****************************** TWM WILDLIFE - wolf singles");
+            //Melonlogger.Msg("****************************** TWM WILDLIFE - wolf singles");
 
             // Dictionary for wolf singles repositioning
             var wolfSingles = new Dictionary<string, Vector3> {
@@ -391,18 +391,18 @@ namespace PathfindersAscent.Routes
                         Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f))
                     );
 
-                    MelonLogger.Msg($"****************************** Processed wolf: {wolf.Key}");
+                    //Melonlogger.Msg($"****************************** Processed wolf: {wolf.Key}");
                 }
                 else
                 {
-                    MelonLogger.Warning($"****************************** Failed to find wolf: {wolf.Key}");
+                    //Melonlogger.Warning($"****************************** Failed to find wolf: {wolf.Key}");
                 }
             }
         }
 
         private static void RepositionTWMWolfPacks()
         {
-            MelonLogger.Msg("****************************** TWM WILDLIFE - Packs");
+            //Melonlogger.Msg("****************************** TWM WILDLIFE - Packs");
             
             // Dictionary for wolf pack repositioning
             var wolfPacks = new Dictionary<string, Vector3> {
@@ -424,7 +424,7 @@ namespace PathfindersAscent.Routes
         
         private static void RepositionTWMDeer()
         {
-            MelonLogger.Msg("****************************** TWM WILDLIFE - deer");
+            //Melonlogger.Msg("****************************** TWM WILDLIFE - deer");
             
             // Dictionary for deer repositioning
             var deer = new Dictionary<string, Vector3> {

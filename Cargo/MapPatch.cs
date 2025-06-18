@@ -16,11 +16,11 @@ namespace PathfindersAscent.Cargo
 
             if (activeScene != "CrashMountainRegion")
             {
-                MelonLogger.Msg($"[MapPatch] Not in CrashMountainRegion (Current Scene: {activeScene}). Skipping.");
+                //MelonLogger.Msg($"[MapPatch] Not in CrashMountainRegion (Current Scene: {activeScene}). Skipping.");
                 return;
             }
 
-            MelonLogger.Msg("[MapPatch] Running in CrashMountainRegion. Checking for CargoCrates...");
+            //MelonLogger.Msg("[MapPatch] Running in CrashMountainRegion. Checking for CargoCrates...");
 
             GameObject[] cargoCrates = UnityEngine.Object.FindObjectsOfType<GameObject>()
                 .Where(obj => obj.name.Contains("CONTAINER_CargoCrate"))
@@ -28,17 +28,17 @@ namespace PathfindersAscent.Cargo
 
             if (cargoCrates.Length == 0)
             {
-                MelonLogger.Msg("[MapPatch] No CargoCrates found.");
+                //MelonLogger.Msg("[MapPatch] No CargoCrates found.");
                 return;
             }
 
             foreach (GameObject cargoCrate in cargoCrates)
             {
-                MelonLogger.Msg($"[MapPatch] Disabling MapDetail on {cargoCrate.name}");
+                //MelonLogger.Msg($"[MapPatch] Disabling MapDetail on {cargoCrate.name}");
                 Main.DisableMapDetail(cargoCrate);
             }
 
-            MelonLogger.Msg($"[MapPatch] Disabled MapDetail on {cargoCrates.Length} CargoCrates.");
+            //MelonLogger.Msg($"[MapPatch] Disabled MapDetail on {cargoCrates.Length} CargoCrates.");
         }
     }
 }

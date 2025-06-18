@@ -20,21 +20,21 @@ namespace PathfindersAscent.Cargo
         {
             if (!cargoContainersEnabled || sceneName != "CrashMountainRegion")
             {
-                MelonLogger.Msg("****************************** Cargo container configuration skipped - feature disabled or wrong scene");
+                //MelonLogger.Msg("****************************** Cargo container configuration skipped - feature disabled or wrong scene");
                 return;
             }
 
-            MelonLogger.Msg("****************************** Configuring Cargo Containers");
+            //MelonLogger.Msg("****************************** Configuring Cargo Containers");
 
             ExperienceModeType currentMode = ExperienceModeManager.GetCurrentExperienceModeType();
-            MelonLogger.Msg($"****************************** Current game mode: {currentMode}");
+            //MelonLogger.Msg($"****************************** Current game mode: {currentMode}");
 
             // Handle lower difficulty modes (Pilgrim, Voyageur, Stalker)
             if (currentMode == ExperienceModeType.Pilgrim ||
                 currentMode == ExperienceModeType.Voyageur ||
                 currentMode == ExperienceModeType.Stalker)
             {
-                MelonLogger.Msg("****************************** Using standard difficulty container configuration");
+                //MelonLogger.Msg("****************************** Using standard difficulty container configuration");
                 ConfigureStandardDifficultyContainers();
             }
             // Handle Interloper and custom modes with minimal resources
@@ -42,18 +42,18 @@ namespace PathfindersAscent.Cargo
                      currentMode == ExperienceModeType.Misery ||
                      GameManager.GetCustomMode().m_BaseResourceAvailability == CustomTunableLMHV.Low)
             {
-                MelonLogger.Msg("****************************** Using Interloper/minimal resources container configuration");
+                //MelonLogger.Msg("****************************** Using Interloper/minimal resources container configuration");
                 ConfigureInterlopeDifficultyContainers();
             }
             else
             {
-                MelonLogger.Msg("****************************** Using standard difficulty container configuration for custom mode");
+                //MelonLogger.Msg("****************************** Using standard difficulty container configuration for custom mode");
                 ConfigureStandardDifficultyContainers();
             }
             
             // Call MapPatch to hide cargo containers from the map
-            MelonLogger.Msg("****************************** Calling MapPatch to hide cargo containers on map");
-            //WanderersHeights.MapPatch.Postfix();
+            // MelonLogger.Msg("****************************** Calling MapPatch to hide cargo containers on map");
+
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace PathfindersAscent.Cargo
         /// </summary>
         private static void ConfigureStandardDifficultyContainers()
         {
-            MelonLogger.Msg("****************************** Configuring STALKER, VOYAGEUR, PILGRIM cargo containers");
+            //MelonLogger.Msg("****************************** Configuring STALKER, VOYAGEUR, PILGRIM cargo containers");
 
             // Define cargo container positions and rotations
             var containerPositions = new Dictionary<string, (Vector3 position, Vector3 rotation)>
@@ -120,14 +120,14 @@ namespace PathfindersAscent.Cargo
                     new Vector3(262.48f, 287.67f, 371.77f),
                     Quaternion.Euler(Vector3.zero)
                 );
-                MelonLogger.Msg("****************************** Repositioned Interloper spawn point");
+                //MelonLogger.Msg("****************************** Repositioned Interloper spawn point");
             }
             else
             {
-                MelonLogger.Warning("****************************** Could not find Interloper spawn point");
+                //MelonLogger.Warning("****************************** Could not find Interloper spawn point");
             }
 
-            MelonLogger.Msg("****************************** Configuring INTERLOPER or MISERY cargo containers");
+            //MelonLogger.Msg("****************************** Configuring INTERLOPER or MISERY cargo containers");
 
             // Define cargo container positions and rotations for Interloper difficulty
             var containerPositions = new Dictionary<string, (Vector3 position, Vector3 rotation)>
@@ -171,16 +171,16 @@ namespace PathfindersAscent.Cargo
                         Quaternion.Euler(container.Value.rotation)
                     );
                     successCount++;
-                    MelonLogger.Msg($"****************************** Positioned container: {container.Key}");
+                    //MelonLogger.Msg($"****************************** Positioned container: {container.Key}");
                 }
                 else
                 {
                     failCount++;
-                    MelonLogger.Warning($"****************************** Could not find container: {container.Key}");
+                    //MelonLogger.Warning($"****************************** Could not find container: {container.Key}");
                 }
             }
 
-            MelonLogger.Msg($"****************************** Successfully positioned {successCount} containers, failed to find {failCount} containers");
+            //MelonLogger.Msg($"****************************** Successfully positioned {successCount} containers, failed to find {failCount} containers");
         }
     }
 }
