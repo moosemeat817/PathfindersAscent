@@ -94,6 +94,7 @@ Each region has one **challenging new player spawn location**.
 - Loot has **not been changed**, except for some minor additions to support map design
 - You can **switch the mod on or off** via Mod Settings
 - Can use alongside normal saves (just toggle mod off when not in use)
+- The mod is **disabled by default**, so you will **need to enable it before** you start to play.
 
 ---
 
