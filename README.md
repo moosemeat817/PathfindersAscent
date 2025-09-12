@@ -116,7 +116,7 @@ Each region has one **challenging new player spawn location**.
 
 ---
 
-## ⚠️ **Currently incompatible with the CoolHome mod.**
+# ⚠️ **Currently incompatible with the CoolHome mod.**
  
 
 ---
