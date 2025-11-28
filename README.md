@@ -116,11 +116,6 @@ Each region has one **challenging new player spawn location**.
 
 ---
 
-### ⚠️ **Currently incompatible with the CoolHome mod.**
- 
-
----
-
 ## 🙏 Special Thanks
 
 - The Long Dark Modding Community (Discord)
