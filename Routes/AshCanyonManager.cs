@@ -50,7 +50,7 @@ namespace PathfindersAscent.Routes
             else
             {
                 InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-264.1084f, 112.842f, 427.6711f), new Vector3(0f, 77.2727f, 350f), new Vector3(0.55f, 8f, 0.6f));
-                InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-262.4342f, 132.3051f, 440.145f), new Vector3(73.938f, 237.0918f, -0.0002f), new Vector3(0.3f, 2.5f, 0.3f));
+                InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-263.2343f, 132.3051f, 440.145f), new Vector3(73.938f, 237.0918f, -0.0002f), new Vector3(0.3f, 2.5f, 0.3f));
                 InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-273.3336f, 136.5641f, 433.8904f), new Vector3(351.232f, 214.8323f, 48.2179f), new Vector3(0.4f, 2f, 0.4f));
                 //Melonlogger.Msg("******************************Receeded snow blockers");
             }
@@ -153,14 +153,7 @@ namespace PathfindersAscent.Routes
             // Disable rose hip climb shrub
             RouteUtilities.SafeDisable("Root/Design/Interactive/INTERACTIVE_RoseHipClimbShrubHarvest (3)");
 
-            // Reposition bunker
-            var bunkerObjects = new Dictionary<string, (Vector3 position, Vector3 rotation)>
-            {
-                {"Root/Design/BunkerHatch/INTERACTIVE_HatchRandomSelect_Prefab",
-                    (new Vector3(295.6821f, 146.8913f, -418.0277f), new Vector3(0f, 0f, 0f))}
-            };
-            RouteUtilities.RepositionObjects(bunkerObjects, "bunker");
-
+            
             // Reposition misc objects
             var miscObjects = new Dictionary<string, (Vector3 position, Vector3 rotation)>
             {
@@ -214,6 +207,23 @@ namespace PathfindersAscent.Routes
             };
 
             RouteUtilities.RepositionObjects(spawnPoints, "player spawn points");
+        }
+
+        public static void ModifyBunker()
+        {
+            // Reposition bunker using unified method
+            //Melonlogger.Msg("****************************** Repositioning bunker");
+            var bunkerData = new Dictionary<string, (Vector3 position, Vector3 rotation)>
+            {
+                {
+                    "Root/Design/BunkerHatch/INTERACTIVE_HatchRandomSelect_Prefab",
+                    (new Vector3(295.6821f, 146.8913f, -418.0277f), new Vector3(0f, 0f, 0f))
+                }
+            };
+
+
+
+            RouteUtilities.RepositionObjects(bunkerData, "bunker objects");
         }
     }
 }

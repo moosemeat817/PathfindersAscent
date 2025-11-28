@@ -88,7 +88,9 @@ namespace PathfindersAscent.Placements
                     InstantiatePrefab("TRN_RockCliff_08_Big_C_Prefab", new Vector3(-335.1143f, 263.2086f, 45.9324f), new Vector3(-0f, 69.1227f, 0f), new Vector3(1f, 1f, 1f));
                     InstantiatePrefab("TRN_RockCliff_08_Big_C_Prefab", new Vector3(-354.1143f, 240.1014f, 56.9324f), new Vector3(2f, 167.5846f, 358f), new Vector3(1f, 1.2f, 1f));
                     InstantiatePrefab("TRN_RockCliff_08_Big_C_Prefab", new Vector3(-377.7567f, 245.856f, 52.0975f), new Vector3(356.0001f, 38.7071f, -0f), new Vector3(.9f, 1f, 1f));
-                    
+
+                    InstantiatePrefab("TRN_RockCliff_08_Big_C_Prefab", new Vector3(897.4969f, 230.2189f, -97.9197f), new Vector3(13.0001f, 254.9626f, 353.9999f), new Vector3(.14f, .03f, .1f));
+
                 }
                 else if (mActiveScene == "AshCanyonRegion")
                 {
@@ -123,7 +125,7 @@ namespace PathfindersAscent.Placements
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-383.5206f, 421.1918f, 437.6736f), new Vector3(317.9999f, 38f, 350f), new Vector3(0.4f, 1f, 0.4f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-392.6859f, 426.6399f, 467.0757f), new Vector3(6.9992f, 77.2728f, 20.5852f), new Vector3(0.35f, 3.1f, 0.3f)); //
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-379.3069f, 419.9167f, 434.6685f), new Vector3(357.2919f, 111.0367f, 307.6563f), new Vector3(0.15f, 1.9075f, 0.7f));
-                    InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(146.669f, 46.1902f, -585.95f), new Vector3(0f, 0f, 0f), new Vector3(1f, 4f, 1f));
+                    //InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(146.669f, 46.1902f, -585.95f), new Vector3(0f, 0f, 0f), new Vector3(1f, 4f, 1f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-393.9511f, 46.8107f, -186.5789f), new Vector3(355.7277f, 36.8181f, 19.8458f), new Vector3(0.7f, 6f, 0.7f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-398.1861f, 44.2705f, -178.9128f), new Vector3(35.676f, 189.9801f, 342.327f), new Vector3(0.7f, 6f, 0.7f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-398.1861f, 50.1704f, -178.9128f), new Vector3(16.6761f, 189.9801f, 341.027f), new Vector3(0.7f, 6f, 0.7f));

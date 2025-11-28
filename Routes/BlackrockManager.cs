@@ -178,6 +178,8 @@ namespace PathfindersAscent.Routes
                     //Melonlogger.Msg($"****************************** Gate Door set ACTIVE");
                 }
 
+
+
                 //Melonlogger.Msg("******************************PlaceTerrain BRM");
                 // Define a helper method to instantiate objects
                 void InstantiatePrefab(string prefabName, Vector3 position, Vector3 rotation, Vector3 scale)
@@ -348,6 +350,23 @@ namespace PathfindersAscent.Routes
         };
 
             RouteUtilities.RepositionObjects(miscObjects, "misc objects");
+        }
+
+        public static void ModifyBunker()
+        {
+            // Reposition bunker using unified method
+            //Melonlogger.Msg("****************************** Repositioning bunker");
+            var bunkerData = new Dictionary<string, (Vector3 position, Vector3 rotation)>
+            {
+                {
+                    "Root/Design/BunkerHatch/INTERACTIVE_HatchRandomSelect_Prefab",
+                    (new Vector3(-811.4968f, 93.5338f, -351.4724f), new Vector3(0f, 0f, 0f))
+                }
+            };
+
+
+
+            RouteUtilities.RepositionObjects(bunkerData, "bunker objects");
         }
     }
 }

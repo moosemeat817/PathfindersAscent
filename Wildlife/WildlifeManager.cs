@@ -275,8 +275,7 @@ namespace PathfindersAscent.Routes
             // Reposition deer
             RepositionTWMDeer();
 
-            // Disable Chasm Bear Spawn and Bones
-            GameObject.Find("WildlifeSpawns/BearSpawns/BearSpawnChasm").gameObject.SetActive(false);
+            
         }
         
         private static void RepositionTWMTimberwolves()

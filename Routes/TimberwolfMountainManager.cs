@@ -226,8 +226,7 @@ namespace PathfindersAscent.Routes
 
             RouteUtilities.RepositionObjects(transitions, "transition points");
 
-           
-         
+
 
             // Reposition misc objects
             var miscObjects = new Dictionary<string, (Vector3 position, Vector3 rotation)>

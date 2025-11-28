@@ -24,7 +24,7 @@ namespace PathfindersAscent
 
         public override void OnInitializeMelon()
         {
-            MelonLogger.Msg("Initializing Wanderers Heights Mod");
+            MelonLogger.Msg("Initializing Pathfinder's Ascent Mod");
             try
             {
                 Settings.OnLoad();
@@ -34,6 +34,8 @@ namespace PathfindersAscent
             {
                 //MelonLogger.Error($"Failed to load settings: {ex.Message}");
             }
+
+
         }
 
         public static void DisableMapDetail(GameObject obj)
@@ -60,7 +62,7 @@ namespace PathfindersAscent
             }
         }
 
-        
+
         public void UpdateGateDoor(int newValue)
         {
             SaveDataManager.gateDoor = newValue;
@@ -89,6 +91,13 @@ namespace PathfindersAscent
         {
             //MelonLogger.Msg($"****************************** Scene initialized: {sceneName} (Build Index: {buildIndex})");
 
+            // REPAIR OBJECTGUIDS FIRST - Before any other processing
+            // This must happen before CoolHome tries to access triggers
+            if (IsExtremeRouteScene(sceneName))
+            {
+                //ObjectGuidRepair.RepairAllIndoorSpaceTriggers();
+            }
+
             if (IsModEnabled())
             {
 
@@ -110,15 +119,17 @@ namespace PathfindersAscent
                         MelonLogger.Msg("Calling BlackrockManager immediately for sandbox");
                         BlackrockManager.ProcessBlackrockRoutes(sceneName);
                     }
+                    /*
                     else if (sceneName == "CrashMountainRegion_SANDBOX")
                     {
                         MelonLogger.Msg("Calling TimberwolfMountainManager immediately for sandbox");
                         TimberwolfMountainManager.ProcessTimberwolfMountainRoutes(sceneName);
                     }
+                    */
                     else if (!sceneName.Contains("_"))
                     {
                         MelonCoroutines.Start(SaveDataManager.LoadDataAndThen(() => ProcessSceneRoutes(sceneName)));
-                       
+
                     }
                 }
 
@@ -167,6 +178,12 @@ namespace PathfindersAscent
 
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
+            if (sceneName == "CrashMountainRegion_WILDLIFE")
+            {
+                // Disable Chasm Bear Spawn and Bones
+                GameObject.Find("WildlifeSpawns/BearSpawns/BearSpawnChasm").gameObject.SetActive(false);
+            }
+
             if (string.IsNullOrEmpty(sceneName))
             {
                 //MelonLogger.Warning("OnSceneWasLoaded called with null or empty scene name");
@@ -181,7 +198,27 @@ namespace PathfindersAscent
 
             ProcessSceneSpecificUpdates(sceneName);
             ProcessCommonSceneOperations(sceneName);
-            ProcessWildlife(sceneName);
+
+            if (!Settings.options.disableWildlife)
+            {
+                ProcessWildlife(sceneName);
+            }
+
+            if (sceneName == "CrashMountainRegion_SANDBOX")
+            {
+                //MelonLogger.Msg("Calling TimberwolfMountainManager immediately for sandbox");
+                TimberwolfMountainManager.ProcessTimberwolfMountainRoutes(sceneName);
+            }
+            else if (sceneName == "BlackrockRegion_SANDBOX")
+            {
+                //MelonLogger.Msg("Calling BlackrockManager immediately for sandbox");
+                BlackrockManager.ModifyBunker();
+            }
+            else if (sceneName == "AshCanyonRegion_SANDBOX")
+            {
+                //MelonLogger.Msg("Calling AshCanyonManager immediately for sandbox");
+                AshCanyonManager.ModifyBunker();
+            }
         }
 
         private void ProcessSceneSpecificUpdates(string sceneName)
@@ -268,5 +305,7 @@ namespace PathfindersAscent
         {
             return Settings.options != null && Settings.options.pathfindersAscent;
         }
+
+
     }
 }
