@@ -257,7 +257,7 @@ namespace PathfindersAscent
                 PlacementManager.PlaceTerrain();
 
                 //MelonLogger.Msg("Calling PlaceAssets");
-                PlacementManager.PlaceAssets();
+                MelonCoroutines.Start(PlacementManager.PlaceAssetsAsync());
 
                 //MelonLogger.Msg("Calling Clones");
                 CloneManager.ChangeObjects();

@@ -6,6 +6,11 @@ using UnityEngine;
 using Il2Cpp;
 using PathfindersAscent.SaveData;
 using MelonLoader;
+using System.Collections;
+
+
+
+
 namespace PathfindersAscent.Placements
 {
     public static class PlacementManager
@@ -36,7 +41,7 @@ namespace PathfindersAscent.Placements
                         GameObject prefab = GameObject.Find(prefabName);
                         SceneUtils.InstantiateObjectInScene(prefab, position, rotation, scale);
                     }
-                    
+
 
                     InstantiatePrefab("OBJ_TreeCedarFelledC_Prefab", new Vector3(-152.7338f, 85.6127f, -885.751f), new Vector3(0f, 190.1946f, 340.9956f), new Vector3(1f, 1f, 1f));
                     InstantiatePrefab("TRN_PineTreeLog_SingleC_Prefab (47)", new Vector3(-66.8777f, 97.466f, -870.9772f), new Vector3(359.6008f, 171.5741f, 318.0867f), new Vector3(1f, 1f, 1f));
@@ -55,7 +60,7 @@ namespace PathfindersAscent.Placements
                     InstantiatePrefab("TRN_RockCliff_08_Big_C_Prefab", new Vector3(-350.6062f, 259.5347f, -151.7818f), new Vector3(4.3f, 219.9999f, 0.5f), new Vector3(1f, .5f, 1f));
                     InstantiatePrefab("TRN_RockCliff_08_Big_C_Prefab", new Vector3(-362.2609f, 263.6891f, -120.1175f), new Vector3(346.9869f, 184.446f, 359.3655f), new Vector3(0.5f, 0.3f, 0.9f));
                     InstantiatePrefab("TRN_RockCliff_09_Big_E_Prefab", new Vector3(-341.7004f, 239.4916f, -145.3508f), new Vector3(3.3992f, 321.6589f, 19.226f), new Vector3(1.1f, 1f, 2.3f));
-                    InstantiatePrefab("TRN_RockCliff_09_Big_E_Prefab", new Vector3(-362.1017f, 243.9588f, -149.4614f), new Vector3(10.399f, 296.4774f, 6.226f), new Vector3(0.5f, 0.5f, 0.5f)); 
+                    InstantiatePrefab("TRN_RockCliff_09_Big_E_Prefab", new Vector3(-362.1017f, 243.9588f, -149.4614f), new Vector3(10.399f, 296.4774f, 6.226f), new Vector3(0.5f, 0.5f, 0.5f));
 
 
 
@@ -101,7 +106,7 @@ namespace PathfindersAscent.Placements
                         GameObject prefab = GameObject.Find(prefabName);
                         SceneUtils.InstantiateObjectInScene(prefab, position, rotation, scale);
                     }
-          
+
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(273.0341f, 100.3001f, -522.3516f), new Vector3(4.9095f, 88.5202f, 297.0022f), new Vector3(1.45f, 4f, 0.5f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(317.237f, 85.301f, -495.3124f), new Vector3(4.9095f, 14.3463f, 294.0021f), new Vector3(1.75f, 4f, 0.5f));
                     //InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(322.6992f, 231.6779f, 593.4512f), new Vector3(0f, 77.1727f, 350f), new Vector3(0.35f, 1.5f, 0.3f));
@@ -119,7 +124,7 @@ namespace PathfindersAscent.Placements
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-559.5278f, 386.6047f, 433.0854f), new Vector3(352.2898f, 355.3818f, 26.8198f), new Vector3(1f, 5f, 0.8f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-614.3828f, 385.1183f, 451.5314f), new Vector3(20.7274f, 2.6909f, 344.5455f), new Vector3(1f, 1.2f, 1f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-607.3373f, 386.9515f, 449.5399f), new Vector3(35.7275f, 27.8182f, 352.4455f), new Vector3(0.5f, 1f, 0.5f));
-                    InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-608.0023f, 389.1516f, 447.3036f), new Vector3(40.7277f, 36.8182f, 355.4455f), new Vector3(0.5f, 1f, 0.5f));                    
+                    InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-608.0023f, 389.1516f, 447.3036f), new Vector3(40.7277f, 36.8182f, 355.4455f), new Vector3(0.5f, 1f, 0.5f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-278.6765f, 432.3819f, 396.3102f), new Vector3(20.7278f, 356.8182f, 355.4455f), new Vector3(0.2f, 1f, 0.2f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-597.1249f, 387.0095f, 442.661f), new Vector3(0f, 179.8f, 329.2817f), new Vector3(0.3f, 1f, 0.3f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-383.5206f, 421.1918f, 437.6736f), new Vector3(317.9999f, 38f, 350f), new Vector3(0.4f, 1f, 0.4f));
@@ -130,7 +135,7 @@ namespace PathfindersAscent.Placements
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-398.1861f, 44.2705f, -178.9128f), new Vector3(35.676f, 189.9801f, 342.327f), new Vector3(0.7f, 6f, 0.7f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-398.1861f, 50.1704f, -178.9128f), new Vector3(16.6761f, 189.9801f, 341.027f), new Vector3(0.7f, 6f, 0.7f));
                     InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(-395.1292f, 48.7981f, -193.0132f), new Vector3(355.7277f, 76.2881f, 330.5439f), new Vector3(0.7f, 4f, 0.7f));
-                    InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(54.2633f, 70.752f, 182.4722f), new Vector3(6.1f, 0f,  0f), new Vector3(0.3f, 1f, 0.3f));
+                    InstantiatePrefab("TRN_Snow_TerrainSectionB_prefab", new Vector3(54.2633f, 70.752f, 182.4722f), new Vector3(6.1f, 0f, 0f), new Vector3(0.3f, 1f, 0.3f));
                 }
                 else if (mActiveScene == "CrashMountainRegion")
                 {
@@ -162,7 +167,7 @@ namespace PathfindersAscent.Placements
                     InstantiatePrefab("TRN_RockCliffBig06_ClimbA_Prefab", new Vector3(1597.944f, 99.2567f, 746.6385f), new Vector3(317.0926f, 290.8908f, 159.616f), new Vector3(.3f, .3f, .3f));
                     InstantiatePrefab("TRN_RockCliffBig06_ClimbA_Prefab", new Vector3(1562.827f, 92.1129f, 702.7678f), new Vector3(28.1974f, 290f, 299.4631f), new Vector3(.3f, .3f, .3f));
                     InstantiatePrefab("TRN_PineTree_SingleJ_Prefab (3)", new Vector3(1601.919f, 84.9835f, 772.7495f), new Vector3(22.0991f, 41.7022f, 15.7571f), new Vector3(.7f, .7f, .7f));
-                    InstantiatePrefab("OBJ_TreeCedarFelledB_Prefab (1)", new Vector3(1554.678f, 106.3684f, 746.0217f), new Vector3(19.2247f, 60.5829f, 357.2851f), new Vector3(1f, 1f, 1f));               
+                    InstantiatePrefab("OBJ_TreeCedarFelledB_Prefab (1)", new Vector3(1554.678f, 106.3684f, 746.0217f), new Vector3(19.2247f, 60.5829f, 357.2851f), new Vector3(1f, 1f, 1f));
                     InstantiatePrefab("TRN_RockGroupMidB_Top_Prefab", new Vector3(1311.558f, 42.6228f, 867.1832f), new Vector3(341.9628f, 47.6026f, 15.6432f), new Vector3(1f, 1f, 1f));
                     InstantiatePrefab("TRN_RockCliffBig06_ClimbA_Prefab", new Vector3(1304.122f, 15.1922f, 914.7496f), new Vector3(319.1254f, 47.6027f, 15.6432f), new Vector3(.7f, .7f, .7f));
                     InstantiatePrefab("TRN_RockGroupMidB_Top_Prefab", new Vector3(1185.378f, 41.7955f, 906.0656f), new Vector3(341.9628f, 270.5204f, 16.8432f), new Vector3(1f, 1f, 1f));
@@ -209,149 +214,125 @@ namespace PathfindersAscent.Placements
                 //Melonlogger.Msg($"Exception occurred while placing terrain: {ex.Message}\n{ex.StackTrace}");
             }
         }
-        public static void PlaceAssets()
+        public static IEnumerator PlaceAssetsAsync()
         {
             string scene = GameManager.m_ActiveScene;
+
             if (scene == "BlackrockPrisonSurvivalZone")
             {
                 //Melonlogger.Msg("******************************PlaceAssets BRP");
-                // Placing OBJ_MineRock23
-                Vector3 pos2 = new Vector3(-212.2483f, 226.8166f, 143.2502f);
-                Vector3 rot2 = new Vector3(359f, 313.5636f, 357.7269f);
-                Vector3 scale2 = new Vector3(0.7f, 0.5f, 0.6f);
-                SceneUtils.PlaceAssetsInScene("OBJ_MineRock23", pos2, rot2, scale2);
 
+                yield return PlaceAssetAsync("OBJ_MineRock23",
+                    new Vector3(-212.2483f, 226.8166f, 143.2502f),
+                    new Vector3(359f, 313.5636f, 357.7269f),
+                    new Vector3(0.7f, 0.5f, 0.6f));
 
-                Vector3 pos4 = new Vector3(-212.2482f, 226.9166f, 144.2502f);
-                Vector3 rot4 = new Vector3(359f, 313.5636f, 353.7269f);
-                Vector3 scale4 = new Vector3(0.7f, 0.5f, 0.6f);
-                SceneUtils.PlaceAssetsInScene("OBJ_MineRock23", pos4, rot4, scale4);
+                yield return PlaceAssetAsync("OBJ_MineRock23",
+                    new Vector3(-212.2482f, 226.9166f, 144.2502f),
+                    new Vector3(359f, 313.5636f, 353.7269f),
+                    new Vector3(0.7f, 0.5f, 0.6f));
             }
             else if (scene == "BlackrockRegion")
             {
                 //Melonlogger.Msg("******************************PlaceAssets BRM");
-                // Placing STR_CoastalHouseHFloorWood
-                Vector3 pos = new Vector3(-349.8026f, 278.0271f, -149.2507f);
-                Vector3 rot = new Vector3(0.0182f, 229.7852f, 359.88f);
-                Vector3 scale = new Vector3(0.67f, 2f, 1.04f);
-                SceneUtils.PlaceAssetsInScene("STR_CoastalHouseHFloorWood", pos, rot, scale);
 
+                yield return PlaceAssetAsync("STR_CoastalHouseHFloorWood",
+                    new Vector3(-349.8026f, 278.0271f, -149.2507f),
+                    new Vector3(0.0182f, 229.7852f, 359.88f),
+                    new Vector3(0.67f, 2f, 1.04f));
 
-                //Melonlogger.Msg("******************************PlaceAssets BRM");
-                // Placing OBJ_WoodPlankSingle
-                Vector3 pos2 = new Vector3(-350.3057f, 282.2212f, -148.9428f);
-                Vector3 rot2 = new Vector3(-0f, 51.094f, 35f);
-                Vector3 scale2 = new Vector3(0.6043f, 1.204f, 0.8287f);
-                SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos2, rot2, scale2);
+                yield return PlaceAssetAsync("OBJ_WoodPlankSingle",
+                    new Vector3(-350.3057f, 282.2212f, -148.9428f),
+                    new Vector3(-0f, 51.094f, 35f),
+                    new Vector3(0.6043f, 1.204f, 0.8287f));
 
+                yield return PlaceAssetAsync("OBJ_WoodPlankSingle",
+                    new Vector3(-350.6457f, 282.0612f, -148.9428f),
+                    new Vector3(-0f, 51.094f, 35f),
+                    new Vector3(0.6043f, 1.204f, 0.8287f));
 
+                yield return PlaceAssetAsync("OBJ_WoodPlankSingle",
+                    new Vector3(-350.1058f, 282.2812f, -148.7828f),
+                    new Vector3(-0f, 51.094f, 34.5001f),
+                    new Vector3(0.6043f, 1.204f, 0.8287f));
 
-                //Melonlogger.Msg("******************************PlaceAssets BRM");
-                // Placing OBJ_WoodPlankSingle
-                Vector3 pos3 = new Vector3(-350.6457f, 282.0612f, -148.9428f);
-                Vector3 rot3 = new Vector3(-0f, 51.094f, 35f);
-                Vector3 scale3 = new Vector3(0.6043f, 1.204f, 0.8287f);
-                SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos3, rot3, scale3);
+                yield return PlaceAssetAsync("OBJ_WoodPlankSingle",
+                    new Vector3(-349.6557f, 282.2411f, -148.4428f),
+                    new Vector3(-0f, 51.094f, 35f),
+                    new Vector3(0.6043f, 1.204f, 0.8287f));
 
-
-                //Melonlogger.Msg("******************************PlaceAssets BRM");
-                // Placing OBJ_WoodPlankSingle
-                Vector3 pos4 = new Vector3(-350.1058f, 282.2812f, -148.7828f);
-                Vector3 rot4 = new Vector3(-0f, 51.094f, 34.5001f);
-                Vector3 scale4 = new Vector3(0.6043f, 1.204f, 0.8287f);
-                SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos4, rot4, scale4);
-
-
-                //Melonlogger.Msg("******************************PlaceAssets BRM");
-                // Placing OBJ_WoodPlankSingle
-                Vector3 pos5 = new Vector3(-349.6557f, 282.2411f, -148.4428f);
-                Vector3 rot5 = new Vector3(-0f, 51.094f, 35f);
-                Vector3 scale5 = new Vector3(0.6043f, 1.204f, 0.8287f);
-                SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos5, rot5, scale5);
-
-
-                //Melonlogger.Msg("******************************PlaceAssets BRM");
-                // Placing OBJ_WoodPlankSingle
-                Vector3 pos6 = new Vector3(-349.9053f, 282.2212f, -148.593f);
-                Vector3 rot6 = new Vector3(-0f, 51.094f, 35f);
-                Vector3 scale6 = new Vector3(0.6043f, 1.204f, 0.9287f);
-                SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos6, rot6, scale6);
-
-
+                yield return PlaceAssetAsync("OBJ_WoodPlankSingle",
+                    new Vector3(-349.9053f, 282.2212f, -148.593f),
+                    new Vector3(-0f, 51.094f, 35f),
+                    new Vector3(0.6043f, 1.204f, 0.9287f));
             }
             else if (scene == "CrashMountainRegion")
             {
                 //Melonlogger.Msg("******************************PlaceAssets TWM");
-                // Placing Cabin Floor
-                Vector3 pos = new Vector3(977.8206f, 514.5352f, 1305.487f);
-                Vector3 rot = new Vector3(358.64f, 232.8071f, 0.1197f);
-                Vector3 scale = new Vector3(0.67f, 40f, 1.04f);
-                SceneUtils.PlaceAssetsInScene("STR_CoastalHouseHFloorWood", pos, rot, scale);
-            
-                
-                //Melonlogger.Msg("******************************PlaceAssets TWM");
-                // Placing OBJ_WoodPlankSingle
-                Vector3 pos2 = new Vector3(979.0076f, 518.4626f, 1302.983f);
-                Vector3 rot2 = new Vector3(2.3f, 54.4506f, 325.3022f);
-                Vector3 scale2 = new Vector3(0.6043f, 1.204f, 0.9287f);
-                SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos2, rot2, scale2);
 
+                yield return PlaceAssetAsync("STR_CoastalHouseHFloorWood",
+                    new Vector3(977.8206f, 514.5352f, 1305.487f),
+                    new Vector3(358.64f, 232.8071f, 0.1197f),
+                    new Vector3(0.67f, 40f, 1.04f));
 
+                yield return PlaceAssetAsync("OBJ_WoodPlankSingle",
+                    new Vector3(979.0076f, 518.4626f, 1302.983f),
+                    new Vector3(2.3f, 54.4506f, 325.3022f),
+                    new Vector3(0.6043f, 1.204f, 0.9287f));
 
-                //Melonlogger.Msg("******************************PlaceAssets TWM");
-                // Placing OBJ_WoodPlankSingle
-                Vector3 pos3 = new Vector3(979.2538f, 518.4526f, 1303.133f);
-                Vector3 rot3 = new Vector3(2.3f, 54.907f, 325.3022f);
-                Vector3 scale3 = new Vector3(0.6043f, 1.204f, 0.8287f);
-                SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos3, rot3, scale3);
+                yield return PlaceAssetAsync("OBJ_WoodPlankSingle",
+                    new Vector3(979.2538f, 518.4526f, 1303.133f),
+                    new Vector3(2.3f, 54.907f, 325.3022f),
+                    new Vector3(0.6043f, 1.204f, 0.8287f));
 
+                yield return PlaceAssetAsync("OBJ_WoodPlankSingle",
+                    new Vector3(979.2891f, 518.6428f, 1303.503f),
+                    new Vector3(2.3f, 54.4506f, 325.3022f),
+                    new Vector3(0.6043f, 1.204f, 0.8287f));
 
-                //Melonlogger.Msg("******************************PlaceAssets TWM");
-                // Placing OBJ_WoodPlankSingle
-                Vector3 pos4 = new Vector3(979.2891f, 518.6428f, 1303.503f);
-                Vector3 rot4 = new Vector3(2.3f, 54.4506f, 325.3022f);
-                Vector3 scale4 = new Vector3(0.6043f, 1.204f, 0.8287f);
-                SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos4, rot4, scale4);
+                yield return PlaceAssetAsync("OBJ_WoodPlankSingle",
+                    new Vector3(979.5192f, 518.6227f, 1303.647f),
+                    new Vector3(2.3f, 54.4506f, 325.3022f),
+                    new Vector3(0.6043f, 1.204f, 0.8287f));
 
+                yield return PlaceAssetAsync("OBJ_WoodPlankSingle",
+                    new Vector3(979.8314f, 518.5507f, 1303.703f),
+                    new Vector3(2.3f, 54.4506f, 325.3022f),
+                    new Vector3(0.6043f, 1.204f, 0.9287f));
 
-                //Melonlogger.Msg("******************************PlaceAssets TWM");
-                // Placing OBJ_WoodPlankSingle
-                Vector3 pos5 = new Vector3(979.5192f, 518.6227f, 1303.647f);
-                Vector3 rot5 = new Vector3(2.3f, 54.4506f, 325.3022f);
-                Vector3 scale5 = new Vector3(0.6043f, 1.204f, 0.8287f);
-                SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos5, rot5, scale5);
+                yield return PlaceAssetAsync("OBJ_MineRock23",
+                    new Vector3(1186.87f, 348.5399f, 1356.884f),
+                    new Vector3(0.0f, 0.0f, 0.0f),
+                    new Vector3(2.5f, 2.5f, 2.5f));
 
+                yield return PlaceAssetAsync("OBJ_MineRock23",
+                    new Vector3(1343.703f, 50.828f, 870.0862f),
+                    new Vector3(0.0f, 16.1009f, 0.0f),
+                    new Vector3(1.5f, 1.5f, 1.5f));
 
-                //Melonlogger.Msg("******************************PlaceAssets TWM");
-                // Placing OBJ_WoodPlankSingle
-                Vector3 pos6 = new Vector3(979.8314f, 518.5507f, 1303.703f);
-                Vector3 rot6 = new Vector3(2.3f, 54.4506f, 325.3022f);
-                Vector3 scale6 = new Vector3(0.6043f, 1.204f, 0.9287f);
-                SceneUtils.PlaceAssetsInScene("OBJ_WoodPlankSingle", pos6, rot6, scale6);
+                yield return PlaceAssetAsync("OBJ_MineRock23",
+                    new Vector3(1329.064f, 50.928f, 876.6658f),
+                    new Vector3(-0, 224.0159f, 0f),
+                    new Vector3(1.5f, 1.5f, 1.5f));
+            }
+        }
 
+        private static IEnumerator PlaceAssetAsync(string prefabName, Vector3 pos, Vector3 rot, Vector3 scale)
+        {
+            GameObject prefab = null;
+            yield return AssetUtils.LoadPrefabAsync(prefabName, (go) => prefab = go);
 
-                //Melonlogger.Msg("******************************PlaceAssets TWM");
-                // Placing OBJ_MineRock23
-                Vector3 pos7 = new Vector3(1186.87f, 348.5399f, 1356.884f);
-                Vector3 rot7 = new Vector3(0.0f, 0.0f, 0.0f);
-                Vector3 scale7 = new Vector3(2.5f, 2.5f, 2.5f);
-                SceneUtils.PlaceAssetsInScene("OBJ_MineRock23", pos7, rot7, scale7);
-
-
-                //Melonlogger.Msg("******************************PlaceAssets TWM");
-                // Placing OBJ_MineRock23
-                Vector3 pos8 = new Vector3(1343.703f, 50.828f, 870.0862f);
-                Vector3 rot8 = new Vector3(0.0f, 16.1009f, 0.0f);
-                Vector3 scale8 = new Vector3(1.5f, 1.5f, 1.5f);
-                SceneUtils.PlaceAssetsInScene("OBJ_MineRock23", pos8, rot8, scale8);
-
-
-                //Melonlogger.Msg("******************************PlaceAssets TWM");
-                // Placing OBJ_MineRock23
-                Vector3 pos9 = new Vector3(1329.064f, 50.928f, 876.6658f);
-                Vector3 rot9 = new Vector3(-0, 224.0159f, 0f);
-                Vector3 scale9 = new Vector3(1.5f, 1.5f, 1.5f);
-                SceneUtils.PlaceAssetsInScene("OBJ_MineRock23", pos9, rot9, scale9);
+            if (prefab != null)
+            {
+                GameObject instance = UnityEngine.Object.Instantiate(prefab);
+                instance.transform.position = pos;
+                instance.transform.rotation = Quaternion.Euler(rot);
+                instance.transform.localScale = scale;
+                instance.name = "ZZZ_" + prefabName;
+            }
+            else
+            {
+                MelonLogger.Warning($"Failed to load prefab: {prefabName}");
             }
         }
     }

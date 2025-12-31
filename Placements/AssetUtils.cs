@@ -1,33 +1,43 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using MelonLoader;
 
 namespace PathfindersAscent.Placements
 {
     internal static class AssetUtils
     {
-        static Dictionary<string, GameObject> cachedPrefabs = new Dictionary<string, GameObject>();
+        public static Dictionary<string, GameObject> cachedPrefabs = new Dictionary<string, GameObject>();
+        static Dictionary<string, bool> loadingPrefabs = new Dictionary<string, bool>();
 
-        public static GameObject GetPrefab(string prefabName)
+        public static IEnumerator LoadPrefabAsync(string prefabName, Action<GameObject> onComplete)
         {
-            if (!cachedPrefabs.ContainsKey(prefabName))
+            if (cachedPrefabs.ContainsKey(prefabName) && cachedPrefabs[prefabName] != null)
             {
-                GeneratePrefab(prefabName);
+                onComplete?.Invoke(cachedPrefabs[prefabName]);
+                yield break;
             }
-            else if (cachedPrefabs.ContainsKey(prefabName) && cachedPrefabs[prefabName] == null)
+
+            if (loadingPrefabs.ContainsKey(prefabName) && loadingPrefabs[prefabName])
             {
-                cachedPrefabs.Remove(prefabName);
-                GeneratePrefab(prefabName);
+                // Wait for the other load to complete
+                while (loadingPrefabs[prefabName])
+                {
+                    yield return null;
+                }
+                onComplete?.Invoke(cachedPrefabs[prefabName]);
+                yield break;
             }
-            // Return the prefab reference directly instead of instantiating it
-            return cachedPrefabs[prefabName];
+
+            loadingPrefabs[prefabName] = true;
+            yield return MelonCoroutines.Start(GeneratePrefabAsync(prefabName, onComplete));
+            loadingPrefabs[prefabName] = false;
         }
 
-        private static void GeneratePrefab(string prefabName)
+        private static IEnumerator GeneratePrefabAsync(string prefabName, Action<GameObject> onComplete)
         {
             GameObject go = new GameObject();
             go.name = prefabName;
@@ -36,35 +46,62 @@ namespace PathfindersAscent.Placements
             MeshRenderer meshRenderer = go.AddComponent<MeshRenderer>();
             MeshCollider meshCollider = go.AddComponent<MeshCollider>();
 
+            AsyncOperationHandle<Mesh> meshHandle = default;
+            AsyncOperationHandle<Material> materialHandle = default;
+
             switch (prefabName)
             {
                 case "OBJ_WoodPlankSingle":
-                    meshFilter.sharedMesh = Addressables.LoadAssetAsync<Mesh>("Assets/ArtAssets/Env/Structures/STR_CoastalHouseG/OBJ_WoodPlankSingle.fbx").WaitForCompletion();
-                    meshRenderer.sharedMaterial = Addressables.LoadAssetAsync<Material>("Assets/ArtAssets/Materials/Global/GLB_WoodPole_A02.mat").WaitForCompletion();
+                    meshHandle = Addressables.LoadAssetAsync<Mesh>("Assets/ArtAssets/Env/Structures/STR_CoastalHouseG/OBJ_WoodPlankSingle.fbx");
+                    yield return meshHandle;
+
+                    materialHandle = Addressables.LoadAssetAsync<Material>("Assets/ArtAssets/Materials/Global/GLB_WoodPole_A02.mat");
+                    yield return materialHandle;
+
+                    meshFilter.sharedMesh = meshHandle.Result;
+                    meshRenderer.sharedMaterial = materialHandle.Result;
                     meshCollider.sharedMesh = meshFilter.sharedMesh;
                     break;
 
                 case "OBJ_MineRock23":
-                    meshFilter.sharedMesh = Addressables.LoadAssetAsync<Mesh>("Assets/ArtAssets/Env/Objects/OBJ_MineRocks/OBJ_MineRock23.fbx").WaitForCompletion();
-                    meshRenderer.sharedMaterial = Addressables.LoadAssetAsync<Material>("Assets/ArtAssets/Materials/Unique/OBJ_MineRocksA_Mat.mat").WaitForCompletion();
+                    meshHandle = Addressables.LoadAssetAsync<Mesh>("Assets/ArtAssets/Env/Objects/OBJ_MineRocks/OBJ_MineRock23.fbx");
+                    yield return meshHandle;
+
+                    materialHandle = Addressables.LoadAssetAsync<Material>("Assets/ArtAssets/Materials/Unique/OBJ_MineRocksA_Mat.mat");
+                    yield return materialHandle;
+
+                    meshFilter.sharedMesh = meshHandle.Result;
+                    meshRenderer.sharedMaterial = materialHandle.Result;
                     meshCollider.sharedMesh = meshFilter.sharedMesh;
                     break;
 
                 case "OBJ_MineRock11":
-                    meshFilter.sharedMesh = Addressables.LoadAssetAsync<Mesh>("Assets/ArtAssets/Env/Objects/OBJ_MineRocks/OBJ_MineRock11.fbx").WaitForCompletion();
-                    meshRenderer.sharedMaterial = Addressables.LoadAssetAsync<Material>("Assets/ArtAssets/Materials/Unique/OBJ_MineRocksA_Mat.mat").WaitForCompletion();
+                    meshHandle = Addressables.LoadAssetAsync<Mesh>("Assets/ArtAssets/Env/Objects/OBJ_MineRocks/OBJ_MineRock11.fbx");
+                    yield return meshHandle;
+
+                    materialHandle = Addressables.LoadAssetAsync<Material>("Assets/ArtAssets/Materials/Unique/OBJ_MineRocksA_Mat.mat");
+                    yield return materialHandle;
+
+                    meshFilter.sharedMesh = meshHandle.Result;
+                    meshRenderer.sharedMaterial = materialHandle.Result;
                     meshCollider.sharedMesh = meshFilter.sharedMesh;
                     break;
 
                 case "STR_CoastalHouseHFloorWood":
-                    meshFilter.sharedMesh = Addressables.LoadAssetAsync<Mesh>("Assets/ArtAssets/Env/Structures/STR_CoastalHouseH/STR_CoastalHouseHFloorWood.fbx").WaitForCompletion();
-                    meshRenderer.sharedMaterial = Addressables.LoadAssetAsync<Material>("Assets/ArtAssets/Materials/Global/GLB_WallWoodNatural_B03.mat").WaitForCompletion();
+                    meshHandle = Addressables.LoadAssetAsync<Mesh>("Assets/ArtAssets/Env/Structures/STR_CoastalHouseH/STR_CoastalHouseHFloorWood.fbx");
+                    yield return meshHandle;
+
+                    materialHandle = Addressables.LoadAssetAsync<Material>("Assets/ArtAssets/Materials/Global/GLB_WallWoodNatural_B03.mat");
+                    yield return materialHandle;
+
+                    meshFilter.sharedMesh = meshHandle.Result;
+                    meshRenderer.sharedMaterial = materialHandle.Result;
                     meshCollider.sharedMesh = meshFilter.sharedMesh;
                     break;
-
             }
 
-            cachedPrefabs.Add(prefabName, go);
+            cachedPrefabs[prefabName] = go;
+            onComplete?.Invoke(go);
         }
     }
 }

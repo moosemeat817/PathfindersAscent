@@ -21,7 +21,13 @@ namespace PathfindersAscent.Placements
         /// </summary>
         public static void PlaceAssetsInScene(string name, Vector3 pos, Vector3 rot, Vector3 scale)
         {
-            GameObject prfb = AssetUtils.GetPrefab(name);
+            GameObject prfb = null;
+            // Since we're now loading async, we can't directly get the prefab here
+            // This method will need to be called after assets are loaded
+            if (AssetUtils.cachedPrefabs.ContainsKey(name))
+            {
+                prfb = AssetUtils.cachedPrefabs[name];
+            }
             CreateAndPlaceObject(prfb, pos, rot, scale, PLACEMENT_PREFIX, autoAddCollider: false);
         }
 
