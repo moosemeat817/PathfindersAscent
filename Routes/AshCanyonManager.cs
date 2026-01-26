@@ -66,7 +66,7 @@ namespace PathfindersAscent.Routes
                 "Root/Art/GrayBlock/INTERACTIVE_RopeCliff_08_50m/TRN_RockAnchor01",
                 "Root/Art/GrayBlock/INTERACTIVE_RopeCliff_08_50m/Rope_50m",
                 "Root/Art/GrayBlack/INTERACTIVE_RopeCliff_08_50m (2)/TRN_RockAnchor01",
-                "Root/Art/GrayBlack/INTERACTIVE_RopeCliff_08_50m (2)/Rope_50m",
+                "Root/Art/GrayBlack/INTERACTIVE_RopeCliff_08_50m (2)/Rope_50m", // homesteaders
                 "Root/Art/WestRidgeLogs/OBJ_TreeCedarFelledD2_Prefab",
                 "Root/Art/Interactive/INTERACTIVE_RopeCliff_08_100m/Rope_100m/006",
                 "Root/Art/Interactive/INTERACTIVE_RopeCliff_08_100m/Rope_100m/007",
@@ -118,7 +118,7 @@ namespace PathfindersAscent.Routes
                     (new Vector3(-597.6268f, 384.9f, 505.44f), new Vector3(0f, 98.0365f, 5f), null)},
                 
                 // Deployed Rope Climb near mine
-                {"Root/Art/Interactive/INTERACTIVE_RopeCliff_08_100m (1)",
+                {"Root/Art/GrayBlock/INTERACTIVE_RopeCliff_08_100m (1)",
                     (new Vector3(-595.3011f, 286.6502f, 534.913f), new Vector3(0f, 196.5272f, 0f), null)},
                 
                 // Undeployed Rope Climb for shortcut

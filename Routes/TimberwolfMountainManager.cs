@@ -156,15 +156,18 @@ namespace PathfindersAscent.Routes
                 if (attempt > 0)
                 {
                     //Melonlogger.Msg($"****************************** Retry attempt {attempt + 1}");
-                    System.Threading.Thread.Sleep(100); // Wait 1/10 second
+                    System.Threading.Thread.Sleep(200); // Wait 1/10 second
                 }
                 string[] rockAnchorsAndRopes = {
-                "/Art/Climbing/Climb50m_lake/INTERACTIVE_RopeCliff_50m/TRN_RockAnchor01",
-                "/Art/Climbing/Climb50m_creek/INTERACTIVE_RopeCliff_50m/TRN_RockAnchor01",
-                "/Art/Climbing/Climb50m_Mountain/INTERACTIVE_RopeCliff_50m/TRN_RockAnchor01",
-                "/Art/Climbing/Climb50m_lake/INTERACTIVE_RopeCliff_50m/Rope_50m",
-                "/Art/Climbing/Climb50m_creek/INTERACTIVE_RopeCliff_50m/Rope_50m",
-                "/Art/Climbing/Climb50m_Mountain/INTERACTIVE_RopeCliff_50m/Rope_50m"
+                //"/Art/Climbing/Climb50m_lake/INTERACTIVE_RopeCliff_50m/TRN_RockAnchor01",
+                //"/Art/Climbing/Climb50m_creek/INTERACTIVE_RopeCliff_50m/TRN_RockAnchor01",
+                //"/Art/Climbing/Climb50m_Mountain/INTERACTIVE_RopeCliff_50m/TRN_RockAnchor01",
+                //"/Art/Climbing/Climb50m_lake/INTERACTIVE_RopeCliff_50m/Rope_50m",
+                //"/Art/Climbing/Climb50m_creek/INTERACTIVE_RopeCliff_50m/Rope_50m",
+                //"/Art/Climbing/Climb50m_Mountain/INTERACTIVE_RopeCliff_50m/Rope_50m",
+                "/Art/Climbing/Climb50m_lake/INTERACTIVE_RopeCliff_50m",
+                "/Art/Climbing/Climb50m_creek/INTERACTIVE_RopeCliff_50m",
+                "/Art/Climbing/Climb50m_Mountain/INTERACTIVE_RopeCliff_50m"
                 };
 
                 RouteUtilities.DisableGameObjects(rockAnchorsAndRopes);

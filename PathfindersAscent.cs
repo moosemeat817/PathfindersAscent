@@ -199,10 +199,12 @@ namespace PathfindersAscent
             ProcessSceneSpecificUpdates(sceneName);
             ProcessCommonSceneOperations(sceneName);
 
+            /*
             if (!Settings.options.disableWildlife)
             {
                 ProcessWildlife(sceneName);
             }
+            */
 
             if (sceneName == "CrashMountainRegion_SANDBOX")
             {
