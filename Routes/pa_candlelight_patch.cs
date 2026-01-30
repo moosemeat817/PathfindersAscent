@@ -18,7 +18,7 @@ namespace PathfindersAscent.Routes
             {
                 // Check if CoolHomeCandlelight is loaded
                 var candlelightAsm = AppDomain.CurrentDomain.GetAssemblies()
-                    .FirstOrDefault(a => a.GetName().Name == "CoolHomeCandlelight");
+                    .FirstOrDefault(a => a.GetName().Name == "DynamicTemperatureCandlelight");
                 return candlelightAsm != null;
             }
             catch
@@ -32,12 +32,12 @@ namespace PathfindersAscent.Routes
             try
             {
                 var candlelightAsm = AppDomain.CurrentDomain.GetAssemblies()
-                    .FirstOrDefault(a => a.GetName().Name == "CoolHomeCandlelight");
+                    .FirstOrDefault(a => a.GetName().Name == "DynamicTemperatureCandlelight");
 
                 if (candlelightAsm == null)
                     return null;
 
-                var coolHomeType = candlelightAsm.GetType("CoolHomeCandlelight.CoolHomeCandlelight");
+                var coolHomeType = candlelightAsm.GetType("DynamicTemperatureCandlelight.DynamicTemperatureCandlelight");
                 var patchClass = coolHomeType?.GetNestedType("LeaveOutdoorSceneWithCandlesPatch",
                     System.Reflection.BindingFlags.NonPublic);
                 var prefixMethod = patchClass?.GetMethod("Prefix",
@@ -56,7 +56,7 @@ namespace PathfindersAscent.Routes
             // Catch ArgumentNullException and suppress it
             if (__exception is ArgumentNullException ex && ex.ParamName == "key")
             {
-                MelonLoader.MelonLogger.Msg($"[PA] Suppressed null key error in CoolHomeCandlelight");
+                MelonLoader.MelonLogger.Msg($"[PA] Suppressed null key error in DynamicTemperatureCandlelight");
                 return null; // Suppress the exception
             }
             return __exception;

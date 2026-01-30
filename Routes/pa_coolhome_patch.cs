@@ -17,7 +17,7 @@ namespace PathfindersAscent.Routes
             try
             {
                 var asm = AppDomain.CurrentDomain.GetAssemblies()
-                    .FirstOrDefault(a => a.GetName().Name == "CoolHome");
+                    .FirstOrDefault(a => a.GetName().Name == "DynamicTemperature");
                 return asm != null;
             }
             catch
@@ -31,10 +31,10 @@ namespace PathfindersAscent.Routes
             try
             {
                 var asm = AppDomain.CurrentDomain.GetAssemblies()
-                    .FirstOrDefault(a => a.GetName().Name == "CoolHome");
+                    .FirstOrDefault(a => a.GetName().Name == "DynamicTemperature");
                 if (asm == null) return null;
 
-                var type = asm.GetType("CoolHome.InteriorSpaceManager");
+                var type = asm.GetType("DynamicTemperature.InteriorSpaceManager");
                 return type?.GetMethod("EnterOutdoorScene", BindingFlags.Public | BindingFlags.Instance);
             }
             catch
@@ -61,7 +61,7 @@ namespace PathfindersAscent.Routes
             try
             {
                 var asm = AppDomain.CurrentDomain.GetAssemblies()
-                    .FirstOrDefault(a => a.GetName().Name == "CoolHome");
+                    .FirstOrDefault(a => a.GetName().Name == "DynamicTemperature");
                 return asm != null;
             }
             catch
@@ -75,10 +75,10 @@ namespace PathfindersAscent.Routes
             try
             {
                 var asm = AppDomain.CurrentDomain.GetAssemblies()
-                    .FirstOrDefault(a => a.GetName().Name == "CoolHome");
+                    .FirstOrDefault(a => a.GetName().Name == "DynamicTemperature");
                 if (asm == null) return null;
 
-                var type = asm.GetType("CoolHome.InteriorSpaceManager");
+                var type = asm.GetType("DynamicTemperature.InteriorSpaceManager");
                 return type?.GetMethod("LeaveOutdoorScene", BindingFlags.Public | BindingFlags.Instance);
             }
             catch
