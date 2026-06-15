@@ -72,7 +72,7 @@ Keep an eye out for:
 
 ---
 
-## 🐺 Wildlife Spawns
+## 🐺 Wildlife Spawns (This feature was removed in the version 1.3.1) 
 
 Wildlife spawns have been moved:
 
